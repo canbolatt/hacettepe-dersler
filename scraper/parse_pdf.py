@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 PDF içindeki ders tablolarını yapılandırılmış satırlara çevirir.
 
@@ -28,7 +27,8 @@ HEADER_ALIASES = {
     "day": ["gün", "gun"],
     "time": ["saat", "saati"],
     "room": ["derslik", "yer", "salon"],
-    "instructor": ["öğretim üyesi", "ogretim uyesi", "öğretim elemanı", "hoca"],
+    "instructor": ["öğretim üyesi", "ogretim uyesi", "öğretim elemanı", "hoca",
+                   "ders sorumlusu", "sorumlu öğretim üyesi"],
     "capacity": ["kontenjan", "kapasite"],
     "group": ["şube", "sube", "grup"],
 }
@@ -99,27 +99,50 @@ def tables_to_courses(tables: list[list[list[str]]]) -> tuple[list[dict], list[s
     courses: list[dict] = []
     warnings: list[str] = []
     current_class_year = None
+    last_col_map: Optional[dict] = None  # önceki tablonun sütun eşlemesi
 
     for table in tables:
         header_row = table[0]
         col_map = {i: _normalize_header(c) for i, c in enumerate(header_row)}
         matched_cols = sum(1 for v in col_map.values() if v)
 
+        rows_to_process = table[1:]  # varsayılan: ilk satır gerçek başlık
+
         if matched_cols < 2:
-            # Başlık satırı tanınamadı; muhtemelen "1. Sınıf" gibi bir bölüm
-            # başlığı ya da farklı bir format. Satırı bağlam olarak sakla,
-            # veri UYDURMA - sadece işaretle.
+            # Başlık satırı tanınamadı. İki olasılık var:
+            #  a) Bu "1. Sınıf" gibi bir bölüm başlığı - veri değil.
+            #  b) Bu, önceki tablonun sayfa sonunda kesilip devam eden hali -
+            #     PDF çoğu zaman başlığı her sayfada TEKRARLAMIYOR, bu yüzden
+            #     pdfplumber bu tablonun ilk (gerçekte VERİ olan) satırını
+            #     yanlışlıkla "başlık" sanıyor.
+            # (b) durumunu, sütun sayısı bir önceki tanınan tabloyla AYNIYSA
+            # kabul ediyoruz - bu durumda o satırı da veri olarak işliyoruz
+            # (atlamıyoruz), çünkü aksi halde gerçek ders satırları sessizce
+            # kaybolur.
             first_cell = " ".join(c for c in header_row if c).strip()
             m = re.search(r"(\d)\s*\.?\s*sınıf", first_cell, re.IGNORECASE)
             if m:
                 current_class_year = m.group(1)
+                continue
+            elif last_col_map is not None and len(header_row) == len(
+                [k for k in last_col_map]
+            ):
+                col_map = last_col_map
+                rows_to_process = table  # başlık satırı yok, hepsi veri
+                warnings.append(
+                    f"Başlıksız devam tablosu bulundu, önceki tablonun sütun "
+                    f"düzeni ile devam ediliyor (ilk satır: "
+                    f"{first_cell[:80]!r})."
+                )
             else:
                 warnings.append(
                     f"Tanınmayan tablo başlığı, atlandı: {first_cell[:80]!r}"
                 )
-            continue
+                continue
+        else:
+            last_col_map = col_map
 
-        for row in table[1:]:
+        for row in rows_to_process:
             record = {"class_year": current_class_year}
             extras = {}
             for i, cell in enumerate(row):
