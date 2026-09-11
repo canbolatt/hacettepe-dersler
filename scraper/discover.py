@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Bölüm sayfalarını tarayıp "ders programı" PDF linklerini otomatik bulmaya
 çalışır. Bir bölüm config.py'de "known_pdf" ile geldiyse (insan tarafından
@@ -49,13 +48,24 @@ def _fetch(url: str) -> Optional[str]:
 
 
 def _score_link(text: str, href: str, expected_term: dict) -> int:
+    """
+    ÖNEMLİ: Bir link, ders programıyla hiç ilgisi olmayan bir belge (örn.
+    Erasmus başvuru takvimi) olsa bile dosya adında dönem/yıl bilgisi
+    geçebiliyor. Bu yüzden bir adayın geçerli sayılması için SADECE tek bir
+    ipucu yetmez; hem "ders program(ı)" gibi bir anahtar kelime HEM DE
+    beklenen yıl etiketinin (örn. "2026-2027") aynı anda bulunması şart
+    koşulur. Biri eksikse aday tamamen elenir (puan verilmez).
+    """
     haystack = f"{text} {href}".lower()
-    score = 0
-    if any(k in haystack for k in KEYWORDS):
-        score += 5
+
+    has_keyword = any(k in haystack for k in KEYWORDS)
     years = expected_term.get("years", "")
-    if years and years.lower().replace("-", "") in haystack.replace("-", ""):
-        score += 3
+    has_year = bool(years) and years.lower().replace("-", "") in haystack.replace("-", "")
+
+    if not (has_keyword and has_year):
+        return 0
+
+    score = 5 + 3  # keyword + year şartı zaten sağlandı
     for y in expected_term.get("yariyil", []):
         if y.lower() in haystack:
             score += 2
