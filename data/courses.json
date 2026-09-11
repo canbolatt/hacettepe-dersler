@@ -1,49 +1,541 @@
 {
-  "generated_at": "2026-09-11T18:30:00+00:00",
-  "note": "Bu dosya, otomasyonun ilk (elle hazırlanan) durumudur. GitHub Actions ilk kez çalıştığında scraper/build.py tarafından otomatik olarak baştan üretilecek ve bu not kalkacaktır.",
+  "generated_at": "2026-09-11T18:54:57+00:00",
   "departments": [
     {
       "id": "psikoloji",
       "name": "Psikoloji",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://psikoloji.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T18:20:00+00:00",
-      "status": "pending_first_run",
+      "last_checked": "2026-09-11T18:54:42+00:00",
+      "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/psikoloji/dosyalar/Ders%20programlar%C4%B1/2026-27%20L%C4%B0SANS%20PANO.pdf",
-      "source_pdf_sha256": null,
-      "note": "2026-2027 Güz lisans ders programı linki bölüm sitesindeki duyurudan doğrulandı (duyuru: Güncelleme 9.09.2026 11:20). Bu link, PDF'lerin barındığı sunucunun bot erişimini kısıtlaması nedeniyle bu ortamda indirilemedi; GitHub Actions üzerinde ilk çalıştırmada otomatik indirilip ayrıştırılacak.",
-      "courses": [],
-      "warnings": []
+      "source_pdf_sha256": "e8bc11731aad8844470c2a71aa2e4a73a3223f935715dcaccdfc7341add9e6ff",
+      "note": "config.py içinde insan tarafından doğrulanmış link (verified_on=2026-09-11).",
+      "courses": [
+        {
+          "class_year": null,
+          "code": "PSL 111-01 GENEL PSİKOLOJİ",
+          "day": "SALI",
+          "time": "09.40-12.30",
+          "room": "İlgili bölümün\nweb sitesinden\nkontrol ediniz",
+          "extra": {
+            "extra_col_1": "ÖĞR. GÖR. AYSUN\nPARLAR YAZICI",
+            "extra_col_2": "ÇGB"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 106-01 PSİKOLOJİ",
+          "day": "PERŞEMBE",
+          "time": "12.40-16.30",
+          "room": "İlgili bölümün\nweb sitesinden\nkontrol ediniz",
+          "extra": {
+            "extra_col_1": "ÖĞR. GÖR. DR. KÜBRA\nULUSOY",
+            "extra_col_2": "SOSYOLOJİ-FELSEFE"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 111-02 GENEL PSİKOLOJİ",
+          "day": "ÇARŞAMBA",
+          "time": "13.40-16.30",
+          "room": "İlgili bölümün\nweb sitesinden\nkontrol ediniz",
+          "extra": {
+            "extra_col_1": "ÖĞR. GÖR. AYSUN\nPARLAR YAZICI",
+            "extra_col_2": "AİLE TÜKETİCİ BİLİMLERİ+\nOKUL ÖNCESİ\nÖĞRETMENLİĞİ"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 315 GELİŞİM PSİKOLOJİSİNE\nGİRİŞ",
+          "day": "SALI",
+          "time": "13.40-16.30",
+          "room": "İlgili bölümün\nweb sitesinden\nkontrol ediniz",
+          "extra": {
+            "extra_col_1": "DR. EKİN DOĞA KOZAK",
+            "extra_col_2": "SOSYOLOJİ-FELSEFE"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 316 KİŞİLİK PSİKOLOJİSİNE\nGİRİŞ",
+          "day": "PAZARTESİ",
+          "time": "09.40-12.30",
+          "room": "B10ZK03",
+          "extra": {
+            "extra_col_1": "ÖĞR. GÖR. AYSUN\nPARLAR YAZICI",
+            "extra_col_2": "SOSYOLOJİ-FELSEFE"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL112-03 TEMEL PSİKOLOJİ",
+          "day": "SALI",
+          "time": "08.40-10.30",
+          "room": "İlgili bölümün\nweb sitesinden\nkontrol ediniz",
+          "extra": {
+            "extra_col_1": "DR. ASLI YÖRÜK-SEVİNÇLİ",
+            "extra_col_2": "FTR"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL111-03 TEMEL PSİKOLOJİ",
+          "day": "PAZARTESİ",
+          "time": "10.40-12.30",
+          "room": "İlgili bölümün\nweb sitesinden\nkontrol ediniz",
+          "extra": {
+            "extra_col_1": "DR. EKİN DOĞA KOZAK\nPAZARTESİ",
+            "extra_col_2": "BESLENME VE DİYETETİK"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL101-01 PSİKOLOJİYE GİRİŞ-I",
+          "day": "SALI",
+          "time": "13:40-16:30",
+          "room": "B10 ZK 02",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "PROF. DR. BANU TAVAT"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL103-01 İSTATİSTİKSEL TEKNİKLER-I",
+          "day": "SALI\nPERŞEMBE",
+          "time": "08.40-11.30\n13:40-15:30",
+          "room": "B10 ZK 02\nEDEBİYAT FAK.\nDEKANLIK LAB.",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "PROF. DR. HALİL\nYURDAGÜL"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL105-01 ARAŞTIRMA TEKNİKLERİ",
+          "day": "PAZARTESİ",
+          "time": "13:40-16:30",
+          "room": "B10 ZK 02",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "ÖĞR. GÖR. DR. AYSUN\nPARLAR"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "TKD103-49 TÜRK DİLİ I",
+          "day": "ÇARŞAMBA",
+          "time": "12.40-14.30",
+          "room": "B10 ZK 02",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "DR. T.M. AKKAYA"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "SOS104-01 SOSYOLOJİYE GİRİŞ",
+          "day": "ÇARŞAMBA",
+          "time": "08.40-11.30",
+          "room": "B10ZK02",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ SEVGİ\nÇOBAN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "BYL150 PSİKOLOJİDE SİNİR FİZYOLOJİSİ",
+          "day": "PERŞEMBE",
+          "time": "08.40-11.30",
+          "room": "B10 ZK 02",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "PROF. DR. MEHMET ALİ\nONUR"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "FEL 205-01 FELSEFE TARİHİ I",
+          "day": "CUMA",
+          "time": "09.40-12.30",
+          "room": "",
+          "capacity": ""
+        },
+        {
+          "class_year": null,
+          "code": "İNG127 TEMEL İNGİLİZCE I",
+          "day": "ÖĞRENCİLER PROGRAMINA\nUYGUN ŞUBEYİ SEÇECEKTİR",
+          "time": "",
+          "room": "",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "(UZAKTAN EĞİTİM)"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL201-01 ÖĞRENME PSİKOLOJİSİ",
+          "day": "CUMA",
+          "time": "08:40-11:30",
+          "room": "B10ZK02",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ ARZU\nÖZKAN CEYLAN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL202-01 SOSYAL PSİKOLOJİ-I",
+          "day": "CUMA",
+          "time": "13:40-16:30",
+          "room": "B10 ZK 02",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. NEVİN SOLAK\nŞAHİN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL204-01 YAŞAM BOYU GELİŞİM-I",
+          "day": "ÇARŞAMBA",
+          "time": "13:40-16:30",
+          "room": "B10 ZK 03",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ ŞULE\nSELÇUK"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL209-01 DENEYSEL PSİKOLOJİ",
+          "day": "PERŞEMBE",
+          "time": "12:40-16:30",
+          "room": "B10ZK03",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "PROF. DR. BANU TAVAT"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL216-01 KLİNİK PSİKOLOJİ",
+          "day": "SALI",
+          "time": "08:40-11:30",
+          "room": "B10 ZK 03",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "PROF. DR. SAİT ULUÇ"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "AİT203-11 ATA. İLK. VE İNK. TAR I",
+          "day": "SALI",
+          "time": "13:40-15:30",
+          "room": "EMEL\nDOĞRAMACI\nDEKANLIK",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. HAYDAR SEÇKİN\nÇELİK"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL302-01 KİŞİLİK KURAMLARI-I",
+          "day": "PAZARTESİ",
+          "time": "13:40-16:30",
+          "room": "B10 ZK 03",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. SEVGİNAR VATAN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL304-01 PSİKOPATOLOJİ-I",
+          "day": "PERŞEMBE",
+          "time": "08:40-11:30",
+          "room": "B10 ZK 03",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. BİKEM KARGI"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 324 SOSYAL PSIKOLOJIDE DUYGU",
+          "day": "SALI",
+          "time": "12:40-15:30",
+          "room": "B10 ZK 03",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "D O Ç. DR. MELİKE EĞER\nAYDOĞMUŞ"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL432 ÇEVRE PSİKOLOJİSİ",
+          "day": "SALI",
+          "time": "08:40-11:30",
+          "room": "B10-202",
+          "capacity": "70",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ HAYAL\nYAVUZ GÜZEL"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 343-03 YAŞAM BOYU GELİŞİMDE\nARAŞTIRMA VE UYGULAMA I",
+          "day": "PERŞEMBE",
+          "time": "12:40-16:30",
+          "room": "B10-203",
+          "capacity": "10",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ ŞULE\nSELÇUK"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 335 DENEYSEL PSİKOLOJİDE AR.\nUYG. I.",
+          "day": "SALI",
+          "time": "08:40-12:30",
+          "room": "B10-203",
+          "capacity": "15",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ ARZU\nÖZKAN CEYLAN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 333 BİLİŞSEL PSİKOLOJİDE\nARAŞTIRMA VE UYGULAMA -I",
+          "day": "ÇARŞAMBA",
+          "time": "12:40-16:30",
+          "room": "B10-204",
+          "capacity": "10",
+          "extra": {
+            "extra_col_1": "PROF. DR. BANU TAVAT"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 337 İŞ VE ÖRGÜT PSİKOLOJİSİNDE\nARAŞTIRMA VE UYGULAMA-I",
+          "day": "SALI",
+          "time": "12:40-16:30",
+          "room": "B10-203",
+          "capacity": "10",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ SAVAŞ\nCEYLAN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 339-02 KLİNİK PSİKOLOJİDE\nARAŞTIRMA VE UYGULAMA-I",
+          "day": "ÇARŞAMBA",
+          "time": "12:40-16:30",
+          "room": "B10-203",
+          "capacity": "10",
+          "extra": {
+            "extra_col_1": "PROF. DR. SAİT ULUÇ"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 339-03 KLİNİK PSİKOLOJİDE\nARAŞTIRMA VE UYGULAMA-I",
+          "day": "PERŞEMBE",
+          "time": "12:40-16:30",
+          "room": "B10-202",
+          "capacity": "6",
+          "extra": {
+            "extra_col_1": "DR.ÖĞRETİM ÜYESİ\nHÜSEYİN NERGİZ"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 339-04 KLİNİK PSİKOLOJİDE\nARAŞTIRMA VE UYGULAMA-I",
+          "day": "SALI",
+          "time": "12:40-16:30",
+          "room": "B10-205",
+          "capacity": "10",
+          "extra": {
+            "extra_col_1": "DR.ÖĞRETİM ÜYESİ SEVGİ\nBEKTAŞ DAĞ"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 339-05 KLİNİK PSİKOLOJİDE\nARAŞTIRMA VE UYGULAMA-I",
+          "day": "PERŞEMBE",
+          "time": "12:40-16:30",
+          "room": "B10-205",
+          "capacity": "10",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. ZEYNEP TÜZÜN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 340-01 KLİNİK PSİKOLOJİDE\nARAŞTIRMA VE UYGULAMA-II",
+          "day": "PERŞEMBE",
+          "time": "08:40-12:30",
+          "room": "B10-203",
+          "capacity": "5",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. SEVGİNAR VATAN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 340-03 KLİNİK PSİKOLOJİDE\nARAŞTIRMA VE UYGULAMA-II",
+          "day": "SALI",
+          "time": "12:40-16:30",
+          "room": "B10-202",
+          "capacity": "5",
+          "extra": {
+            "extra_col_1": "DR. ZEHRA ÇAKIR"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 437 ARAŞTIRMA BECERİLERİ",
+          "day": "PAZARTESİ",
+          "time": "08.40-12.30",
+          "room": "B10ZK02",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ ARZU\nÖZKAN CEYLAN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 410 BİLİŞSEL GELİŞİM",
+          "day": "SALI",
+          "time": "08.40-11.30",
+          "room": "B10-205",
+          "capacity": "40",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. BERNA AYTAÇ"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 343-01 YAŞAM BOYU GELİŞİMDE\nARAŞTIRMA VE UYGULAMA I",
+          "day": "PAZARTESİ",
+          "time": "12.40-16.30",
+          "room": "B10-203",
+          "capacity": "6",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. BERNA AYTAÇ"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 343-02 YAŞAM BOYU GELİŞİMDE\nARAŞTIRMA VE UYGULAMA I",
+          "day": "PAZARTESİ",
+          "time": "12.40-16.30",
+          "room": "B10-202",
+          "capacity": "10",
+          "extra": {
+            "extra_col_1": "PROF. DR. ZEHRA UÇANOK"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 313 BİLGİSAYAR UYGULAMALI\nİSTATİSTİK -I",
+          "day": "ÇARŞAMBA",
+          "time": "12.40-16.30",
+          "room": "DEKANLIK LAB.",
+          "capacity": "25",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. ZEYNEL BARAN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 411 ADLİ PSİKOLOJİ",
+          "day": "SALI",
+          "time": "13.40-16.30",
+          "room": "B10-204",
+          "capacity": "70",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ HÜSEYİN\nNERGİZ"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 341-02 SOSYAL PSİKOLOJİDE\nARAŞTIRMA VE UYGULAMA I",
+          "day": "ÇARŞAMBA",
+          "time": "12.40-16.30",
+          "room": "B10-202",
+          "capacity": "10",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. NEVİN SOLAK\nŞAHİN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 417 GÖRÜŞME TEKNİKLERİ",
+          "day": "PERŞEMBE",
+          "time": "13.40-16.30",
+          "room": "B10ZK02",
+          "capacity": "------",
+          "extra": {
+            "extra_col_1": "PROF. DR. MÜJGAN İNÖZÜ\nMERMERKAYA"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 429 MADDE KULLANIMI, BEYİN VE\nDAVRANIŞ",
+          "day": "PERŞEMBE",
+          "time": "08.40-11.30",
+          "room": "B10-202",
+          "capacity": "70",
+          "extra": {
+            "extra_col_1": "DOÇ. DR. ZEYNEL BARAN"
+          }
+        },
+        {
+          "class_year": null,
+          "code": "PSL 436 ALAN UYGULAMASI*",
+          "day": "PAZARTESİ",
+          "time": "12.40-17.30",
+          "room": "B10-205",
+          "capacity": "6",
+          "extra": {
+            "extra_col_1": "DR. ÖĞR. ÜYESİ HÜSEYİN\nNERGİZ"
+          }
+        }
+      ],
+      "warnings": [
+        "Tanınmayan tablo başlığı, atlandı: 'PSL 348 İŞ VE ÖRGÜT PSİKOLOJİSİ- I DR. ÖĞR. ÜYESİ SAVAŞ\\nCEYLAN CUMA 12:40-16:30 '",
+        "Tanınmayan tablo başlığı, atlandı: 'PSL 447 AFET VE TRAVMA PSİKOLOJİSİ I DOÇ. DR. SEDAT IŞIKLI CUMA 08.40-11.30 B10Z'"
+      ]
     },
     {
       "id": "maden-muhendisligi",
       "name": "Maden Mühendisliği",
       "faculty": "Mühendislik Fakültesi",
       "homepage": "https://maden.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T18:20:00+00:00",
-      "status": "pending_first_run",
+      "last_checked": "2026-09-11T18:54:51+00:00",
+      "status": "parse_error",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/maden/dosyalar/dersprogrami/2627G-Program.pdf",
-      "source_pdf_sha256": null,
-      "note": "2026-2027 Güz ders programı linki bölüm sitesinden doğrulandı (Güncelleme Tarihi: 11.09.2026). Aynı sunucu kısıtlaması nedeniyle bu ortamda indirilemedi; GitHub Actions üzerinde ilk çalıştırmada otomatik indirilip ayrıştırılacak.",
+      "source_pdf_sha256": "e835c231102172d545cf2f968393a202674773097e30dd25bd4ff6d86f81fc46",
+      "note": "config.py içinde insan tarafından doğrulanmış link (verified_on=2026-09-11). | PDF indirildi ama hiç ders satırı çıkarılamadı.",
       "courses": [],
-      "warnings": []
+      "warnings": [
+        "Tanınmayan tablo başlığı, atlandı: 'GÜN\\nDAY .mS 08:40-9:30 09:40-10:30 10:40-11:30 11:40-12:30 12:40-13:30 13:40-14:'",
+        "Tanınmayan tablo başlığı, atlandı: 'ABC'"
+      ]
     },
     {
       "id": "matematik",
       "name": "Matematik",
       "faculty": "Fen Fakültesi",
       "homepage": "https://mat.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T18:20:00+00:00",
-      "status": "not_published",
-      "source_pdf_url": null,
-      "source_pdf_sha256": null,
-      "note": "11.09.2026 itibarıyla 2026-2027 Güz lisans ders programı bölüm sitesinde henüz yayınlanmamış (duyurular sayfası kontrol edildi). Otomasyon her çalıştığında bunu tekrar kontrol edecek, yayınlanır yayınlanmaz otomatik yakalayacak.",
-      "last_known_stale_pdf": {
-        "url": "https://mat.hacettepe.edu.tr/duyurular/2025-2026-G.D.-Ders-Programi.pdf",
-        "term": "2025-2026 Güz",
-        "verified_on": "2026-09-11",
-        "note": "Sadece referans amaçlı — bu dönemin programı değildir."
-      },
+      "last_checked": "2026-09-11T18:54:53+00:00",
+      "status": "parse_error",
+      "source_pdf_url": "https://mat.hacettepe.edu.tr/duyurular/2026-2027-A.Y.-ErasmusPlus-G.D.-ve-Tam-A.Y.-Secim-Takvimi-Hakkinda.pdf",
+      "source_pdf_sha256": "4a4a6195a1fb99079138a8e0ea57eb76e69eba1b7e6f65f645c57690d34b9171",
+      "note": "Otomatik keşifle bulundu (skor=6). İlk çalıştırmada mutlaka elle doğrulanmalı. | PDF indirildi ama hiç ders satırı çıkarılamadı.",
       "courses": [],
       "warnings": []
     }
