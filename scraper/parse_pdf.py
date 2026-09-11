@@ -20,7 +20,16 @@ import pdfplumber
 # Bölümden bölüme sıralama/isimlendirme değişebildiği için burada geniş bir
 # eşanlamlılar sözlüğü tutuyoruz; eşleşmeyen sütunlar "extra_N" olarak
 # olduğu gibi saklanır (veri kaybı olmasın diye).
+#
+# ÖNEMLİ SIRALAMA: "code_and_name" (örn. "DERS KODU-ŞUBESİ VE ADI" - kod ve
+# ders adının BİRLEŞİK tek sütun olduğu format) alaşı, düz "code" alaşından
+# ("kod" gibi çok genel bir kelime içerdiği için) ÖNCE kontrol edilmeli;
+# aksi halde "kod" kelimesi geçtiği için yanlışlıkla salt "code" sayılıp
+# ders adı hiç ayrıştırılmadan kaybolur.
 HEADER_ALIASES = {
+    "code_and_name": ["kodu-şubesi ve adı", "kodu-subesi ve adi",
+                       "kod-şube ve adı", "kodu ve adı"],
+    "cross_dept": ["bölüm dışı", "bolum disi", "verildiği bölüm", "bölüm"],
     "code": ["ders kodu", "kod", "ders no", "dersin kodu"],
     "name": ["ders adı", "dersin adı", "ders ismi", "adı"],
     "class_year": ["sınıf", "sinif"],
@@ -32,6 +41,12 @@ HEADER_ALIASES = {
     "capacity": ["kontenjan", "kapasite"],
     "group": ["şube", "sube", "grup"],
 }
+
+# "Kod ve Ad" birleşik hücresini ikiye ayırmak için: baştaki ders kodu
+# kalıbı (örn. "PSL 111-01", "BYL150", "AİT203-11").
+CODE_PREFIX_RE = re.compile(
+    r"^([A-ZÇĞİİÖŞÜ]{2,5}\s?\d{3}(?:-\d{1,3})?)\s*(.*)$", re.DOTALL
+)
 
 
 _TR_FOLD = str.maketrans({
@@ -100,6 +115,8 @@ def tables_to_courses(tables: list[list[list[str]]]) -> tuple[list[dict], list[s
     warnings: list[str] = []
     current_class_year = None
     last_col_map: Optional[dict] = None  # önceki tablonun sütun eşlemesi
+    seen_keys: set[tuple] = set()  # aynı dersin iki kez eklenmesini önlemek için
+    duplicate_count = 0
 
     for table in tables:
         header_row = table[0]
@@ -147,15 +164,71 @@ def tables_to_courses(tables: list[list[list[str]]]) -> tuple[list[dict], list[s
             extras = {}
             for i, cell in enumerate(row):
                 key = col_map.get(i)
-                if key:
+                if key == "code_and_name":
+                    # "PSL 111-01 GENEL PSİKOLOJİ" gibi birleşik hücreyi
+                    # kod + ad olarak ikiye ayır. Satır kaydırmasından
+                    # (\n) gelen boşlukları tek boşluğa indirger, ki ders
+                    # adı düzgün tek satır olsun.
+                    flat = " ".join((cell or "").split())
+                    m = CODE_PREFIX_RE.match(flat)
+                    if m:
+                        record["code"] = m.group(1).strip()
+                        record["name"] = m.group(2).strip() or None
+                    else:
+                        # Kod kalıbı tanınamadı - veri UYDURMA, olduğu
+                        # gibi "name" alanına koy, kodu boş bırak.
+                        record["name"] = flat or None
+                elif key == "cross_dept":
+                    if cell and cell.strip():
+                        record["cross_dept"] = cell.strip()
+                elif key:
                     record[key] = cell
                 elif cell:
                     extras[f"extra_col_{i}"] = cell
+
+            if record.get("cross_dept"):
+                # Kullanıcı isteği: bu dersler başka bölümün öğrencilerine
+                # açılan / bölüm dışına verilen derslerdir - Sınıf yerine
+                # bunu açıkça belirt. Orijinal "hangi bölüme" bilgisi
+                # kaybolmasın diye extra'da da saklanır.
+                extras["hedef_bolum"] = record.pop("cross_dept")
+                record["class_year"] = "Bölüm dışına verilen ders"
+
             if extras:
                 record["extra"] = extras
             # En az ders kodu ya da ders adından biri yoksa muhtemelen
             # gerçek bir ders satırı değildir (örn. alt toplam/boşluk satırı).
             if record.get("code") or record.get("name"):
+                # Aynı ders (kod+gün+saat+derslik+öğretim üyesi hepsi birebir
+                # aynı) daha önce eklendiyse bu satır muhtemelen bir sayfa
+                # geçişinde tabloların üst üste binmesinden kaynaklanan bir
+                # TEKRARDIR, gerçek ikinci bir ders değildir - atla. (Aynı
+                # dersin aynı anda aynı yerde iki kez okutulması gerçek
+                # hayatta anlamsız olduğu için bu güvenli bir varsayım.)
+                def _norm(v: Optional[str]) -> str:
+                    # Karşılaştırma için: boşluk/satır kaydırmaları tekleştir,
+                    # saat ayracı olarak kullanılan "." ve ":" birbirinin
+                    # aynısı sayılsın (kaynak PDF ikisini de karışık kullanıyor).
+                    v = " ".join((v or "").split())
+                    return re.sub(r"(?<=\d)\.(?=\d)", ":", v).strip().lower()
+
+                dedup_key = (
+                    _norm(record.get("code")),
+                    _norm(record.get("day")),
+                    _norm(record.get("time")),
+                    _norm(record.get("room")),
+                    _norm(record.get("instructor")),
+                )
+                if dedup_key in seen_keys:
+                    duplicate_count += 1
+                    continue
+                seen_keys.add(dedup_key)
                 courses.append(record)
+
+    if duplicate_count:
+        warnings.append(
+            f"{duplicate_count} tekrarlanan ders satırı (muhtemelen sayfa "
+            f"geçişi kaynaklı) elendi, sayıma dahil edilmedi."
+        )
 
     return courses, warnings
