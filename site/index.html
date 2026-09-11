@@ -1,3 +1,4 @@
+=== site/index.html ===
 <!doctype html>
 <html lang="tr">
 <head>
@@ -5,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hacettepe Açılan Dersler</title>
 <link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 <header>
@@ -18,32 +20,81 @@
 </header>
 
 <main>
-  <section class="controls">
-    <input id="searchBox" type="search" placeholder="Ders kodu, ders adı ya da öğretim üyesi ara…" autocomplete="off">
-    <div id="deptFilters" class="dept-filters"></div>
+  <nav class="tabs" id="mainTabs">
+    <button class="tab-btn active" data-tab="list">Tüm Dersler</button>
+    <button class="tab-btn" data-tab="builder">Program Oluşturucu</button>
+  </nav>
+
+  <!-- ================= SEKME 1: TÜM DERSLER ================= -->
+  <section class="tab-panel active" id="panel-list">
+    <section class="controls">
+      <input id="searchBox" type="search" placeholder="Ders kodu, ders adı ya da öğretim üyesi ara…" autocomplete="off">
+      <div id="deptFilters" class="dept-filters"></div>
+    </section>
+
+    <section id="statusBanners"></section>
+
+    <section>
+      <table id="coursesTable">
+        <thead>
+          <tr>
+            <th>Bölüm</th>
+            <th>Kod</th>
+            <th>Ders Adı</th>
+            <th>Sınıf</th>
+            <th>Gün</th>
+            <th>Saat</th>
+            <th>Derslik</th>
+            <th>Öğretim Üyesi</th>
+            <th>Kontenjan</th>
+            <th>Kaynak</th>
+          </tr>
+        </thead>
+        <tbody id="coursesBody"></tbody>
+      </table>
+      <p id="emptyState" class="empty-state" hidden>Aramanla eşleşen ders bulunamadı.</p>
+    </section>
   </section>
 
-  <section id="statusBanners"></section>
+  <!-- ================= SEKME 2: PROGRAM OLUŞTURUCU ================= -->
+  <section class="tab-panel" id="panel-builder">
+    <p class="subtitle" style="max-width:66ch;">
+      Almayı düşündüğün dersleri işaretle. Aynı dersin birden fazla şubesi varsa
+      tüm şubeler tek grup altında listelenir — programda o dersten yalnızca bir
+      şube yer alır. Seçtiğin derslerin hepsini almak zorunda değilsin: aşağıdaki
+      buton, seçtiğin havuzdan oluşturulabilecek tüm çakışmasız program
+      senaryolarını (ders sayısı sınırı olmadan) hesaplar. Veriler "Tüm Dersler"
+      sekmesiyle aynı, canlı kaynaktan gelir.
+    </p>
 
-  <section>
-    <table id="coursesTable">
-      <thead>
-        <tr>
-          <th>Bölüm</th>
-          <th>Kod</th>
-          <th>Ders Adı</th>
-          <th>Sınıf</th>
-          <th>Gün</th>
-          <th>Saat</th>
-          <th>Derslik</th>
-          <th>Öğretim Üyesi</th>
-          <th>Kontenjan</th>
-          <th>Kaynak</th>
-        </tr>
-      </thead>
-      <tbody id="coursesBody"></tbody>
-    </table>
-    <p id="emptyState" class="empty-state" hidden>Aramanla eşleşen ders bulunamadı.</p>
+    <p id="builderSkipNote" class="banner warn" hidden></p>
+
+    <div class="filter-row">
+      <span class="label">Bölüm:</span>
+      <div class="chip-group" id="builderDeptChips"></div>
+      <input type="text" class="search-input" id="builderSearch" placeholder="Ders adı, hoca veya kod ara…">
+    </div>
+
+    <div id="groupContainer"></div>
+
+    <div class="builder-constraints">
+      <span class="label">Boş bırakılacak gün(ler):</span>
+      <div class="offday-group" id="offDayChips">
+        <button class="offday-chip" data-day="Pazartesi">Pazartesi</button>
+        <button class="offday-chip" data-day="Salı">Salı</button>
+        <button class="offday-chip" data-day="Çarşamba">Çarşamba</button>
+        <button class="offday-chip" data-day="Perşembe">Perşembe</button>
+        <button class="offday-chip" data-day="Cuma">Cuma</button>
+      </div>
+    </div>
+
+    <div class="builder-actions">
+      <button class="btn-primary" id="generateBtn">Programları Oluştur</button>
+      <button class="btn-secondary" id="clearSelectionBtn">Seçimi Temizle</button>
+      <span class="status" id="selectionStatus">Henüz ders seçilmedi.</span>
+    </div>
+
+    <div id="builderResults"></div>
   </section>
 </main>
 
@@ -55,5 +106,6 @@
 </footer>
 
 <script src="app.js"></script>
+<script src="builder.js"></script>
 </body>
 </html>
