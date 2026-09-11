@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hacettepe Açılan Dersler</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Hacettepe Üniversitesi — Açılan Dersler</h1>
+  <p class="subtitle">
+    Bölümlerin kendi sitelerinde ayrı ayrı yayınladığı ders programı PDF'lerini
+    tek yerde arayabilmen için hazırlandı. Her satırın kaynağı olan PDF'e
+    doğrudan link verilir — hiçbir bilgi uydurulmaz.
+  </p>
+  <p class="meta-updated" id="generatedAt">Yükleniyor…</p>
+</header>
+
+<main>
+  <section class="controls">
+    <input id="searchBox" type="search" placeholder="Ders kodu, ders adı ya da öğretim üyesi ara…" autocomplete="off">
+    <div id="deptFilters" class="dept-filters"></div>
+  </section>
+
+  <section id="statusBanners"></section>
+
+  <section>
+    <table id="coursesTable">
+      <thead>
+        <tr>
+          <th>Bölüm</th>
+          <th>Kod</th>
+          <th>Ders Adı</th>
+          <th>Sınıf</th>
+          <th>Gün</th>
+          <th>Saat</th>
+          <th>Derslik</th>
+          <th>Öğretim Üyesi</th>
+          <th>Kontenjan</th>
+          <th>Kaynak</th>
+        </tr>
+      </thead>
+      <tbody id="coursesBody"></tbody>
+    </table>
+    <p id="emptyState" class="empty-state" hidden>Aramanla eşleşen ders bulunamadı.</p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    Veriler ilgili bölümlerin resmî web sitelerinden otomatik olarak çekilir.
+    Bir hata görürsen kaynak PDF linkine tıklayıp orijinaliyle karşılaştırabilirsin.
+  </p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

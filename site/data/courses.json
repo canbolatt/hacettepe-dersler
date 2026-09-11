@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-09-11T18:30:00+00:00",
+  "note": "Bu dosya, otomasyonun ilk (elle hazırlanan) durumudur. GitHub Actions ilk kez çalıştığında scraper/build.py tarafından otomatik olarak baştan üretilecek ve bu not kalkacaktır.",
+  "departments": [
+    {
+      "id": "psikoloji",
+      "name": "Psikoloji",
+      "faculty": "Edebiyat Fakültesi",
+      "homepage": "https://psikoloji.hacettepe.edu.tr/",
+      "last_checked": "2026-09-11T18:20:00+00:00",
+      "status": "pending_first_run",
+      "source_pdf_url": "https://fs.hacettepe.edu.tr/psikoloji/dosyalar/Ders%20programlar%C4%B1/2026-27%20L%C4%B0SANS%20PANO.pdf",
+      "source_pdf_sha256": null,
+      "note": "2026-2027 Güz lisans ders programı linki bölüm sitesindeki duyurudan doğrulandı (duyuru: Güncelleme 9.09.2026 11:20). Bu link, PDF'lerin barındığı sunucunun bot erişimini kısıtlaması nedeniyle bu ortamda indirilemedi; GitHub Actions üzerinde ilk çalıştırmada otomatik indirilip ayrıştırılacak.",
+      "courses": [],
+      "warnings": []
+    },
+    {
+      "id": "maden-muhendisligi",
+      "name": "Maden Mühendisliği",
+      "faculty": "Mühendislik Fakültesi",
+      "homepage": "https://maden.hacettepe.edu.tr/",
+      "last_checked": "2026-09-11T18:20:00+00:00",
+      "status": "pending_first_run",
+      "source_pdf_url": "https://fs.hacettepe.edu.tr/maden/dosyalar/dersprogrami/2627G-Program.pdf",
+      "source_pdf_sha256": null,
+      "note": "2026-2027 Güz ders programı linki bölüm sitesinden doğrulandı (Güncelleme Tarihi: 11.09.2026). Aynı sunucu kısıtlaması nedeniyle bu ortamda indirilemedi; GitHub Actions üzerinde ilk çalıştırmada otomatik indirilip ayrıştırılacak.",
+      "courses": [],
+      "warnings": []
+    },
+    {
+      "id": "matematik",
+      "name": "Matematik",
+      "faculty": "Fen Fakültesi",
+      "homepage": "https://mat.hacettepe.edu.tr/",
+      "last_checked": "2026-09-11T18:20:00+00:00",
+      "status": "not_published",
+      "source_pdf_url": null,
+      "source_pdf_sha256": null,
+      "note": "11.09.2026 itibarıyla 2026-2027 Güz lisans ders programı bölüm sitesinde henüz yayınlanmamış (duyurular sayfası kontrol edildi). Otomasyon her çalıştığında bunu tekrar kontrol edecek, yayınlanır yayınlanmaz otomatik yakalayacak.",
+      "last_known_stale_pdf": {
+        "url": "https://mat.hacettepe.edu.tr/duyurular/2025-2026-G.D.-Ders-Programi.pdf",
+        "term": "2025-2026 Güz",
+        "verified_on": "2026-09-11",
+        "note": "Sadece referans amaçlı — bu dönemin programı değildir."
+      },
+      "courses": [],
+      "warnings": []
+    }
+  ]
+}
