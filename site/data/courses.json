@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-11T19:13:59+00:00",
+  "generated_at": "2026-09-11T19:34:39+00:00",
   "departments": [
     {
       "id": "psikoloji",
       "name": "Psikoloji",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://psikoloji.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T19:13:53+00:00",
+      "last_checked": "2026-09-11T19:34:32+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/psikoloji/dosyalar/Ders%20programlar%C4%B1/2026-27%20L%C4%B0SANS%20PANO.pdf",
       "source_pdf_sha256": "e8bc11731aad8844470c2a71aa2e4a73a3223f935715dcaccdfc7341add9e6ff",
@@ -515,7 +515,7 @@
       "name": "Maden Mühendisliği",
       "faculty": "Mühendislik Fakültesi",
       "homepage": "https://maden.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T19:13:56+00:00",
+      "last_checked": "2026-09-11T19:34:35+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/maden/dosyalar/dersprogrami/2627G-Program.pdf",
       "source_pdf_sha256": "e835c231102172d545cf2f968393a202674773097e30dd25bd4ff6d86f81fc46",
@@ -1096,7 +1096,7 @@
       "name": "Matematik",
       "faculty": "Fen Fakültesi",
       "homepage": "https://mat.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T19:13:58+00:00",
+      "last_checked": "2026-09-11T19:34:36+00:00",
       "status": "not_published",
       "source_pdf_url": null,
       "source_pdf_sha256": null,
@@ -1109,6 +1109,253 @@
         "verified_on": "2026-09-11",
         "note": "2026-2027 Güz programı yayınlanana kadar sadece referans amaçlı."
       }
+    },
+    {
+      "id": "tarih",
+      "name": "Tarih",
+      "faculty": "Edebiyat Fakültesi",
+      "homepage": "https://history.hacettepe.edu.tr/",
+      "last_checked": "2026-09-11T19:34:38+00:00",
+      "status": "ok",
+      "source_pdf_url": "https://fs.hacettepe.edu.tr/tarih/dosyalar/duyurular/2026-2027%20G%C3%BCz%20D%C3%B6nemi%20Lisans%20Ders%20Program%C4%B1.pdf",
+      "source_pdf_sha256": "6327b8774741633aef1021e55d7b05b5f2afadca468cec583168895545419a87",
+      "note": "config.py içinde insan tarafından doğrulanmış link (verified_on=2026-09-11).",
+      "courses": [
+        {
+          "class_year": "1",
+          "code": "TKD103-12",
+          "name": "Türk Dili I",
+          "day": "Salı",
+          "time": "14.40-16.30",
+          "room": "ÇEVRİM İÇİ",
+          "extra": {
+            "extra_col_3": "Dr. Asuman Bayram"
+          }
+        },
+        {
+          "class_year": "1",
+          "code": "TAR 127-01",
+          "name": "Osmanlıca I",
+          "day": "Cuma",
+          "time": "13.40-16.30",
+          "room": "B4-2K-206",
+          "extra": {
+            "extra_col_3": "Dr. Ömer Gezer"
+          }
+        },
+        {
+          "class_year": "1",
+          "code": "SOS104",
+          "name": "Sosyolojiye Giriş",
+          "day": "Çarşamba",
+          "time": "09.40-12.30",
+          "room": "B10-ZK-02\n(Psikoloji\nDersliği)",
+          "extra": {
+            "extra_col_3": "Dr. Orhan Samet Pençe"
+          }
+        },
+        {
+          "class_year": "1",
+          "code": "TAR l35-0l",
+          "name": "Bilgisayar ve Tarih I",
+          "day": "Cuma",
+          "time": "09.40-12.30",
+          "room": "AR-GE",
+          "extra": {
+            "extra_col_3": "Dr. Fatih Yeşil"
+          }
+        },
+        {
+          "class_year": "1",
+          "code": "TAR I27-02",
+          "name": "Osmanlıca I",
+          "day": "Perşembe",
+          "time": "09.40-12.30",
+          "room": "B4-2K-206",
+          "extra": {
+            "extra_col_3": "Dr. Nagihan Doğan"
+          }
+        },
+        {
+          "class_year": "1",
+          "code": "TAR 131-01",
+          "name": "Tarih Metodolojisi",
+          "day": "Pazartesi",
+          "time": "08.40-11.30",
+          "room": "B4-2K-202",
+          "extra": {
+            "extra_col_3": "Dr. Fatih Yeşil"
+          }
+        },
+        {
+          "class_year": "1",
+          "code": "TAR 111-01",
+          "name": "İlkçağ Tarihi",
+          "day": "Perşembe",
+          "time": "13.40-16.30",
+          "room": "B4-2K-202",
+          "extra": {
+            "extra_col_3": "Dr. Koray Toptaş"
+          }
+        },
+        {
+          "class_year": "1",
+          "code": "ANT105-1",
+          "name": "Antropolojiye Giriş",
+          "day": "Salı",
+          "time": "08.40-11.30",
+          "room": "B4-2K-204",
+          "extra": {
+            "extra_col_3": "Dr. Meliha Melis Koruyucu Şimşek"
+          }
+        },
+        {
+          "class_year": "2",
+          "code": "TAR 215",
+          "name": "Türk Kültür Tarihi I",
+          "day": "Pazartesi",
+          "time": "13.40-16.30",
+          "room": "B4-2K-204",
+          "extra": {
+            "extra_col_3": "Dr. Erkin Ekrem"
+          }
+        },
+        {
+          "class_year": "2",
+          "code": "AİT203-14",
+          "name": "Atatürk İlke ve İnkılapları Tarihi",
+          "day": "Salı",
+          "time": "08.40-10.30",
+          "room": "Emel Doğramacı",
+          "extra": {
+            "extra_col_3": "Dr. Yasemin Doğaner"
+          }
+        },
+        {
+          "class_year": "2",
+          "code": "TAR 235",
+          "name": "Klasik İslam Dünyası",
+          "day": "Çarşamba",
+          "time": "13.40-16.30",
+          "room": "B4-2K-202",
+          "extra": {
+            "extra_col_3": "Dr. Nagihan Doğan"
+          }
+        },
+        {
+          "class_year": "2",
+          "code": "TAR 243-01",
+          "name": "Osmanlıca III",
+          "day": "Çarşamba",
+          "time": "09.40-12.30",
+          "room": "B4-2K-206",
+          "extra": {
+            "extra_col_3": "Dr. M. Hulusi Lekesiz"
+          }
+        },
+        {
+          "class_year": "2",
+          "code": "TAR 237-1/2",
+          "name": "Ortaçağ Avrupa Tarihi",
+          "day": "Pazartesi",
+          "time": "09.40-12.30",
+          "room": "B4-2K-203",
+          "extra": {
+            "extra_col_3": "Dr. Caner Togaç"
+          }
+        },
+        {
+          "class_year": "2",
+          "code": "TAR 2l7",
+          "name": "Müslüman Türk Dünyası",
+          "day": "Perşembe",
+          "time": "09.40-12.30",
+          "room": "B4-2K-204",
+          "extra": {
+            "extra_col_3": "Dr. Resul Ay"
+          }
+        },
+        {
+          "class_year": "2",
+          "code": "TAR243-02",
+          "name": "Osmanlıca III",
+          "day": "Perşembe",
+          "time": "13.40.16.30",
+          "room": "B4-2K-206",
+          "extra": {
+            "extra_col_3": "Dr. M. Hulusi Lekesiz"
+          }
+        },
+        {
+          "class_year": "2",
+          "code": "TAR 243-03",
+          "name": "Osmanlıca III",
+          "day": "Cuma",
+          "time": "09.40-12.30",
+          "room": "B4-2K-205",
+          "extra": {
+            "extra_col_3": "Dr. Ömer Gezer"
+          }
+        },
+        {
+          "class_year": "2",
+          "code": "TAR 245",
+          "name": "Tarihi Coğrafya",
+          "day": "Salı",
+          "time": "13.40-16.30",
+          "room": "B4-2K-202",
+          "extra": {
+            "extra_col_3": "Dr. Özlem Sert"
+          }
+        },
+        {
+          "class_year": "3",
+          "code": "TAR-327",
+          "name": "Rusya Kafkasya Tarihi",
+          "day": "Cuma",
+          "time": "8.40-11.30",
+          "room": "B4-2K-202",
+          "extra": {
+            "extra_col_3": "Dr. Özhan Kapıcı"
+          }
+        },
+        {
+          "class_year": "3",
+          "code": "TAR-341",
+          "name": "Osmanlı Paleografyası",
+          "day": "Çarşamba",
+          "time": "13.40-16.30",
+          "room": "B4-2K-206",
+          "extra": {
+            "extra_col_3": "Dr. M. Hulusi Lekesiz"
+          }
+        },
+        {
+          "class_year": "3",
+          "code": "TAR-377",
+          "name": "Büyük Selçuklu Tarihi",
+          "day": "Çarşamba",
+          "time": "09.40-12.30",
+          "room": "B4-2K-203",
+          "extra": {
+            "extra_col_3": "Dr. Resul Ay"
+          }
+        },
+        {
+          "class_year": "3",
+          "code": "TAR-333",
+          "name": "Türk Edebiyatı Tarihi I",
+          "day": "Perşembe",
+          "time": "14.40-16.30",
+          "room": "B4-2K-205",
+          "extra": {
+            "extra_col_3": "Dr. Aysun Çelik"
+          }
+        }
+      ],
+      "warnings": [
+        "Tanınmayan tablo başlığı, atlandı: '3 TAR 345-01 Türk Tarih Semineri Dr. M. Hulusi Lekesiz Pazartesi 13.40-15.30 B4-'"
+      ]
     }
   ]
 }
