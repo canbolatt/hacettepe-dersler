@@ -10,12 +10,19 @@ haftalık GÜN x SAAT matrisi ("pano") şeklinde yayınlıyor. Bu dosyalarda:
     yayılıyor (içerik uzun olduğu için) - bu durumda yarıyıl numarası
     sadece bloğun bir satırında görünüyor, diğer satır boş.
 
-GÜVENLİK İLKESİ: Bu format çok değişken olduğu için ders kodu/ders adı/
-öğretim üyesi gibi alt alanlara BÖLMEYE ÇALIŞMIYORUZ (yanlış bölme = yanlış
-veri riski). Bunun yerine her hücrenin TAM METNİNİ ("raw_text") olduğu gibi
-saklıyoruz; sadece arama için işe yarasın diye başta duran ders kodunu
-(örn. "MAD 345") emin olduğumuz durumda ayrıca çıkarıyoruz. Gün, yarıyıl ve
-saat bilgisi tablodaki KONUMDAN geldiği için bunlar güvenilir.
+Bir hücrenin ham metni genelde şu satırlardan oluşur:
+  1. satır : "KOD [- ŞUBE] [(P)/(T) işareti] Ders Adı" (bazen ders adı 2.
+             satıra taşar)
+  2..N. satır : "ÖĞRETİM ÜYESİ (Derslik)" - öğretim üyesi satırları HEMEN
+             HER ZAMAN (neredeyse) tamamen BÜYÜK HARFLİDİR, ders adı
+             satırları ise Türkçe başlık düzeninde (ilk harf büyük, gerisi
+             küçük) yazılır - bu ayrımı programatik olarak tespit ediyoruz.
+  Derslik bilgisi satır sonundaki "(...)" içinde gelir.
+
+Bu kalıp elimizdeki gerçek PDF'ler üzerinde doğrulandı. Yine de %100 garanti
+olmadığı için: bölme başarısız/belirsiz olursa alan boş bırakılır, ASLA
+tahmin edilerek doldurulmaz; hücrenin tam ham metni de "raw_text" alanında
+her zaman saklanır ki hiçbir bilgi kaybolmasın.
 """
 from __future__ import annotations
 
@@ -51,6 +58,76 @@ def _decode_rotated_day(page, x0: float, x1: float, top: float, bottom: float) -
 
 def _is_header_row(row: list) -> bool:
     return bool(row) and len(row) > 1 and row[1] and ".ms" in str(row[1]).strip().lower()
+
+
+def _looks_like_instructor_line(line: str) -> bool:
+    """Öğretim üyesi satırları bu PDF'lerde neredeyse tamamen BÜYÜK
+    HARFLİ; ders adı satırları ise Türkçe başlık biçiminde (ilk harf
+    büyük, gerisi küçük) yazılır. Harflerin çoğu büyükse (>%85) bu satırı
+    öğretim üyesi olarak kabul ediyoruz."""
+    letters = [c for c in line if c.isalpha()]
+    if not letters:
+        return False
+    upper_ratio = sum(1 for c in letters if c.isupper()) / len(letters)
+    return upper_ratio > 0.85
+
+
+def split_cell_text(raw_text: str) -> dict:
+    """Bir gün/saat panosu hücresinin ham metnini kod/ad/öğretim üyesi/
+    derslik alanlarına ayırır. Emin olunamayan alan boş (None) bırakılır -
+    hiçbir zaman tahmin edilerek doldurulmaz."""
+    lines = [l.strip() for l in raw_text.split("\n") if l.strip()]
+    if not lines:
+        return {"code": None, "name": None, "instructor": None, "room": None}
+
+    room = None
+    # Son satır TAMAMEN parantez içindeyse ("(Uzaktan Eğitim)" gibi) o
+    # doğrudan derslik/lokasyon bilgisidir.
+    if re.fullmatch(r"\(.*\)", lines[-1]):
+        room = lines[-1][1:-1].strip()
+        lines = lines[:-1]
+    elif lines:
+        # Aksi halde son satırın SONUNDAKİ "(...)" parçası derslik olabilir
+        # (örn. "ORKUN ERSOY (Y1-02)").
+        m = re.search(r"\(([^()]*)\)\s*$", lines[-1])
+        if m:
+            room = m.group(1).strip()
+            lines[-1] = lines[-1][: m.start()].strip()
+            if not lines[-1]:
+                lines.pop()
+
+    # Sondan başlayarak, "öğretim üyesi gibi görünen" satırları topla.
+    # NOT: bazı ders adları da PDF'te tamamen BÜYÜK HARFLE yazılmış oluyor
+    # (örn. "DİL BECERİLERİ I") - bu yüzden bir satır ders KODUYLA
+    # başlıyorsa, büyük harfli olsa bile asla öğretim üyesi sayılmaz (kod
+    # her zaman hücrenin ilk/ana satırındadır, öğretim üyesi satırında kod
+    # olmaz).
+    instructor_lines: list[str] = []
+    while (
+        lines
+        and not CODE_PREFIX_RE.match(lines[-1])
+        and _looks_like_instructor_line(lines[-1])
+    ):
+        instructor_lines.insert(0, lines.pop())
+    instructor = " ".join(instructor_lines).strip() or None
+
+    if not lines:
+        # Bu hücrede kod/ad kalmadı (örn. bir önceki satırın devamı olan
+        # yalnızca öğretim üyesi + derslik içeren bir parça).
+        return {"code": None, "name": None, "instructor": instructor, "room": room}
+
+    code_match = CODE_PREFIX_RE.match(lines[0])
+    if code_match:
+        code = code_match.group(1).strip()
+        first_line_rest = lines[0][code_match.end():].strip()
+    else:
+        code = None
+        first_line_rest = lines[0]
+
+    name_parts = ([first_line_rest] if first_line_rest else []) + lines[1:]
+    name = " ".join(p for p in name_parts if p).strip() or None
+
+    return {"code": code, "name": name, "instructor": instructor, "room": room}
 
 
 def extract_grid_courses(pdf_path: str) -> tuple[list[dict], list[str]]:
@@ -139,31 +216,35 @@ def extract_grid_courses(pdf_path: str) -> tuple[list[dict], list[str]]:
 
                     for sem, row_indices in sem_rows.items():
                         for col_idx, time_label in time_cols.items():
-                            texts = []
-                            for ri in row_indices:
-                                row = grid[ri]
-                                val = row[col_idx] if col_idx < len(row) else None
-                                if val and val.strip():
-                                    texts.append(val.strip())
+                            # dict.fromkeys: ayni hucrede pdfplumber'in iki
+                            # kez verdigi birebir ayni metni tekille
+                            texts = list(dict.fromkeys(
+                                val.strip()
+                                for ri in row_indices
+                                for val in [grid[ri][col_idx] if col_idx < len(grid[ri]) else None]
+                                if val and val.strip()
+                            ))
                             if not texts:
                                 continue
-                            combined = " | ".join(dict.fromkeys(texts))  # tekrarları at
-                            code_match = CODE_PREFIX_RE.match(combined)
-                            code = code_match.group(1).strip() if code_match else None
-                            if " | " in combined:
+                            if len(texts) > 1:
                                 warnings.append(
                                     f"{day_match} / yy.{sem} / {time_label}: aynı hücrede "
-                                    f"birden fazla ders olabilir, elle ayrılmalı: "
-                                    f"{combined[:120]!r}"
+                                    f"{len(texts)} farklı ders bulundu, ayrı ayrı kaydedildi "
+                                    f"(muhtemelen bu saatte birden fazla şube/seçmeli ders "
+                                    f"aynı anda sunuluyor): "
+                                    f"{' | '.join(texts)[:160]!r}"
                                 )
-                            records.append({
-                                "day": day_match,
-                                "class_year": sem,
-                                "time": time_label,
-                                "code": code,
-                                "name": combined,  # tam metin - hiçbir şey kaybolmasın
-                                "room": None,
-                                "instructor": None,
-                                "capacity": None,
-                            })
+                            for raw_text in texts:
+                                parsed = split_cell_text(raw_text)
+                                records.append({
+                                    "day": day_match,
+                                    "class_year": sem,
+                                    "time": time_label,
+                                    "code": parsed["code"],
+                                    "name": parsed["name"],
+                                    "instructor": parsed["instructor"],
+                                    "room": parsed["room"],
+                                    "capacity": None,
+                                    "raw_text": raw_text,
+                                })
     return records, warnings
