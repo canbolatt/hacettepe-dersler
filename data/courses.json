@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-11T18:56:12+00:00",
+  "generated_at": "2026-09-11T19:02:39+00:00",
   "departments": [
     {
       "id": "psikoloji",
       "name": "Psikoloji",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://psikoloji.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T18:56:03+00:00",
+      "last_checked": "2026-09-11T19:02:32+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/psikoloji/dosyalar/Ders%20programlar%C4%B1/2026-27%20L%C4%B0SANS%20PANO.pdf",
       "source_pdf_sha256": "e8bc11731aad8844470c2a71aa2e4a73a3223f935715dcaccdfc7341add9e6ff",
@@ -515,7 +515,7 @@
       "name": "Maden Mühendisliği",
       "faculty": "Mühendislik Fakültesi",
       "homepage": "https://maden.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T18:56:08+00:00",
+      "last_checked": "2026-09-11T19:02:36+00:00",
       "status": "parse_error",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/maden/dosyalar/dersprogrami/2627G-Program.pdf",
       "source_pdf_sha256": "e835c231102172d545cf2f968393a202674773097e30dd25bd4ff6d86f81fc46",
@@ -531,13 +531,19 @@
       "name": "Matematik",
       "faculty": "Fen Fakültesi",
       "homepage": "https://mat.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T18:56:09+00:00",
-      "status": "parse_error",
-      "source_pdf_url": "https://mat.hacettepe.edu.tr/duyurular/2026-2027-A.Y.-ErasmusPlus-G.D.-ve-Tam-A.Y.-Secim-Takvimi-Hakkinda.pdf",
-      "source_pdf_sha256": "4a4a6195a1fb99079138a8e0ea57eb76e69eba1b7e6f65f645c57690d34b9171",
-      "note": "Otomatik keşifle bulundu (skor=6). İlk çalıştırmada mutlaka elle doğrulanmalı. | PDF indirildi ama hiç ders satırı çıkarılamadı.",
+      "last_checked": "2026-09-11T19:02:38+00:00",
+      "status": "not_published",
+      "source_pdf_url": null,
+      "source_pdf_sha256": null,
+      "note": "Duyuru sayfalarında beklenen döneme ait bir ders programı PDF'i bulunamadı. Elle kontrol edilmeli. Bu dönem için henüz yayın yok. Son bilinen (ESKİ, 2025-2026 Güz) program referans olarak: https://mat.hacettepe.edu.tr/duyurular/2025-2026-G.D.-Ders-Programi.pdf",
       "courses": [],
-      "warnings": []
+      "warnings": [],
+      "last_known_stale_pdf": {
+        "url": "https://mat.hacettepe.edu.tr/duyurular/2025-2026-G.D.-Ders-Programi.pdf",
+        "term": "2025-2026 Güz",
+        "verified_on": "2026-09-11",
+        "note": "2026-2027 Güz programı yayınlanana kadar sadece referans amaçlı."
+      }
     }
   ]
 }
