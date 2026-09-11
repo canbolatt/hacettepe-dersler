@@ -76,6 +76,23 @@ DEPARTMENTS = [
         },
         "parser": "generic",
     },
+    {
+        "id": "tarih",
+        "name": "Tarih",
+        "faculty": "Edebiyat Fakültesi",
+        "homepage": "https://history.hacettepe.edu.tr/",
+        "duyuru_pages": ["https://history.hacettepe.edu.tr/"],
+        "expected_term": {"years": "2026-2027", "yariyil": ["Güz", "GÜZ"]},
+        "known_pdf": {
+            "url": "https://fs.hacettepe.edu.tr/tarih/dosyalar/duyurular/2026-2027%20G%C3%BCz%20D%C3%B6nemi%20Lisans%20Ders%20Program%C4%B1.pdf",
+            "verified_on": "2026-09-11",
+            "note": "Bölüm sayfasındaki duyurudan alındı: '2026-2027 Güz Dönemi "
+                    "Lisans Ders Programı', duyuru tarihi 11.09.2026 12:00.",
+        },
+        # Format henüz doğrulanmadı - PDF indirilip test edilene kadar
+        # "generic" (satır-tablo) varsayılıyor; gerekirse "grid"e çevrilecek.
+        "parser": "generic",
+    },
 ]
 
 # Genel HTTP ayarları
