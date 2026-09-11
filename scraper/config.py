@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Bölüm kayıt defteri (registry).
 
@@ -53,7 +52,9 @@ DEPARTMENTS = [
             "note": "Bölüm sayfasında 'Güncelleme Tarihi: 11.09.2026' ile "
                     "yayınlanmış 2026-2027 Güz programı.",
         },
-        "parser": "generic",
+        # Bu bölüm ders programını satır-tablo değil, GÜN x SAAT matrisi
+        # ("pano") şeklinde yayınlıyor - bkz. scraper/parse_grid.py
+        "parser": "grid",
     },
     {
         "id": "matematik",
