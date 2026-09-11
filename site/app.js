@@ -13,6 +13,17 @@ const STATUS_LABELS = {
 let ALL_DEPARTMENTS = [];
 let ACTIVE_DEPT_IDS = new Set();
 
+// JS'in yerleşik toLowerCase()'i Türkçe büyük "İ" harfini doğru küçültmüyor
+// (nokta işaretini koruyor), bu yüzden arama kutusunda "klinik" gibi bir
+// kelime "KLİNİK" içeren derslerle eşleşmiyordu. Türkçe harfleri ASCII'ye
+// indirgeyen basit bir katlama fonksiyonuyla bunu düzeltiyoruz.
+function trFold(s) {
+  return (s || "").toString().trim().toLowerCase()
+    .replace(/ı/g, "i").replace(/i̇/g, "i")
+    .replace(/ş/g, "s").replace(/ğ/g, "g").replace(/ç/g, "c")
+    .replace(/ö/g, "o").replace(/ü/g, "u");
+}
+
 async function loadData() {
   const res = await fetch("data/courses.json", { cache: "no-store" });
   if (!res.ok) throw new Error("courses.json yüklenemedi: " + res.status);
@@ -81,7 +92,7 @@ function escapeHtml(s) {
 function escapeAttr(s) { return escapeHtml(s); }
 
 function renderTable() {
-  const q = document.getElementById("searchBox").value.trim().toLowerCase();
+  const q = trFold(document.getElementById("searchBox").value);
   const tbody = document.getElementById("coursesBody");
   tbody.innerHTML = "";
   let count = 0;
@@ -89,9 +100,9 @@ function renderTable() {
   for (const dept of ALL_DEPARTMENTS) {
     if (!ACTIVE_DEPT_IDS.has(dept.id)) continue;
     for (const course of dept.courses) {
-      const haystack = [
+      const haystack = trFold([
         course.code, course.name, course.instructor, dept.name,
-      ].filter(Boolean).join(" ").toLowerCase();
+      ].filter(Boolean).join(" "));
       if (q && !haystack.includes(q)) continue;
 
       const tr = document.createElement("tr");
@@ -117,7 +128,20 @@ function renderTable() {
   document.getElementById("emptyState").hidden = count > 0;
 }
 
+function initTabs() {
+  const buttons = document.querySelectorAll("#mainTabs .tab-btn");
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      document.querySelectorAll(".tab-panel").forEach((p) => p.classList.remove("active"));
+      document.getElementById("panel-" + btn.dataset.tab).classList.add("active");
+    });
+  });
+}
+
 async function init() {
+  initTabs();
   try {
     const data = await loadData();
     ALL_DEPARTMENTS = data.departments;
@@ -127,6 +151,9 @@ async function init() {
     renderBanners(ALL_DEPARTMENTS);
     renderTable();
     document.getElementById("searchBox").addEventListener("input", renderTable);
+    if (typeof initBuilder === "function") {
+      initBuilder(ALL_DEPARTMENTS);
+    }
   } catch (e) {
     document.getElementById("generatedAt").textContent =
       "Veri yüklenemedi: " + e.message;
