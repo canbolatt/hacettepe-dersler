@@ -1,0 +1,57 @@
+name: Ders programlarını güncelle
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Bağımlılıkları kur
+        run: pip install -r requirements.txt
+
+      - name: Ders programlarını çek ve ayrıştır
+        run: python -m scraper.build
+
+      - name: Değişiklik varsa commit'le
+        run: |
+          git config user.name "hacettepe-dersler-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/courses.json site/data/courses.json
+          git diff --cached --quiet || git commit -m "Ders programı verisini güncelle [otomatik]"
+          git push
+
+      - name: Pages için hazırla
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy-pages:
+    needs: update-data
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Pages'e yayınla
+        id: deployment
+        uses: actions/deploy-pages@v4
