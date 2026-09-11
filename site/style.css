@@ -150,6 +150,248 @@ footer {
   font-size: 0.8rem;
 }
 
+/* --- Sekmeler (Tüm Dersler / Program Oluşturucu) --- */
+nav.tabs {
+  display: flex;
+  gap: 2px;
+  margin: 20px 0 24px;
+  border-bottom: 1px solid var(--border);
+  max-width: 960px;
+}
+nav.tabs .tab-btn {
+  font-size: 14.5px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 10px 4px;
+  margin-right: 26px;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transform: translateY(1px);
+}
+nav.tabs .tab-btn.active { color: var(--text); border-bottom: 2px solid var(--accent); }
+nav.tabs .tab-btn:hover { color: var(--text); }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* --- Program Oluşturucu --- */
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+.filter-row .label, .builder-constraints .label { font-size: 13px; color: var(--muted); }
+.chip-group { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip {
+  font-size: 13px;
+  padding: 6px 13px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card);
+  cursor: pointer;
+  color: var(--muted);
+}
+.chip.active { background: var(--text); color: var(--bg); border-color: var(--text); }
+.search-input {
+  font-size: 13.5px;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  min-width: 220px;
+  flex: 1;
+}
+
+#groupContainer { margin-bottom: 6px; }
+.group-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.group-card.selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.group-head { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
+.group-head input[type=checkbox] {
+  margin-top: 4px; width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; flex-shrink: 0;
+}
+.group-head .g-title { font-weight: 600; font-size: 15px; }
+.group-head .g-meta { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.section-list {
+  margin: 10px 0 2px 28px;
+  padding-left: 14px;
+  border-left: 2px solid var(--border);
+}
+.section-row {
+  font-size: 13px;
+  padding: 5px 0;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.section-row b { color: var(--text); font-weight: 500; }
+.section-row .course-code { font-family: ui-monospace, "IBM Plex Mono", monospace; font-size: 12px; }
+
+.day-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.builder-constraints {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.offday-group { display: flex; gap: 6px; flex-wrap: wrap; }
+.offday-chip {
+  font-size: 13px;
+  padding: 6px 13px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--card);
+  cursor: pointer;
+  color: var(--muted);
+}
+.offday-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.builder-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 4px 0 26px;
+  padding: 16px 18px;
+  background: var(--paper-raised, #efece5);
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  font-weight: 600;
+  font-size: 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-primary:hover { opacity: .92; }
+.btn-secondary {
+  font-size: 13px;
+  background: none;
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--muted);
+}
+.builder-actions .status { font-size: 13px; color: var(--muted); }
+
+#builderResults { margin-top: 10px; }
+.result-summary {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.schedule-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+.schedule-card .sc-head {
+  background: #efece5;
+  padding: 10px 16px;
+  font-size: 12.5px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.sc-download-btn {
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 5px 11px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.sc-download-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.grid-week {
+  display: grid;
+  font-size: 11.5px;
+}
+.grid-week .head-cell {
+  font-size: 10.5px;
+  color: var(--muted);
+  padding: 6px 4px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+.grid-week .time-col {
+  border-bottom: 1px solid var(--border);
+  padding: 6px 4px;
+  color: var(--muted);
+  font-size: 10px;
+  text-align: right;
+}
+.grid-week .block {
+  position: absolute;
+  left: 2px; right: 2px;
+  border-radius: 4px;
+  color: #fff;
+  padding: 3px 5px;
+  font-size: 10.5px;
+  line-height: 1.25;
+  overflow: hidden;
+}
+.schedule-list { padding: 14px 16px; font-size: 13px; }
+.schedule-list .row {
+  display: flex;
+  gap: 10px;
+  padding: 5px 0;
+  border-bottom: 1px dashed var(--border);
+  flex-wrap: wrap;
+}
+.schedule-list .row:last-child { border-bottom: none; }
+.schedule-list .row .name { font-weight: 600; flex: 1; min-width: 180px; }
+.schedule-list .row .meta { color: var(--muted); }
+
+.conflict-note {
+  font-size: 13px;
+  color: var(--warn-text);
+  background: var(--warn-bg);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 640px) {
+  .grid-week { font-size: 10px; }
+  .grid-week .block { font-size: 9px; }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #17181a;
@@ -164,4 +406,7 @@ footer {
   }
   thead th { background: #26282b; }
   tbody tr:hover { background: #26282b; }
+  .chip.active { background: var(--text); color: var(--bg); }
+  .builder-actions { background: #26282b; }
+  .schedule-card .sc-head { background: #26282b; }
 }
