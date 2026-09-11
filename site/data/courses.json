@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-11T19:12:56+00:00",
+  "generated_at": "2026-09-11T19:13:59+00:00",
   "departments": [
     {
       "id": "psikoloji",
       "name": "Psikoloji",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://psikoloji.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T19:12:41+00:00",
+      "last_checked": "2026-09-11T19:13:53+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/psikoloji/dosyalar/Ders%20programlar%C4%B1/2026-27%20L%C4%B0SANS%20PANO.pdf",
       "source_pdf_sha256": "e8bc11731aad8844470c2a71aa2e4a73a3223f935715dcaccdfc7341add9e6ff",
@@ -515,15 +515,580 @@
       "name": "Maden Mühendisliği",
       "faculty": "Mühendislik Fakültesi",
       "homepage": "https://maden.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T19:12:46+00:00",
-      "status": "parse_error",
+      "last_checked": "2026-09-11T19:13:56+00:00",
+      "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/maden/dosyalar/dersprogrami/2627G-Program.pdf",
       "source_pdf_sha256": "e835c231102172d545cf2f968393a202674773097e30dd25bd4ff6d86f81fc46",
-      "note": "config.py içinde insan tarafından doğrulanmış link (verified_on=2026-09-11). | PDF indirildi ama hiç ders satırı çıkarılamadı.",
-      "courses": [],
+      "note": "config.py içinde insan tarafından doğrulanmış link (verified_on=2026-09-11).",
+      "courses": [
+        {
+          "day": "PAZARTESİ",
+          "class_year": "1",
+          "time": "10:40-11:30",
+          "code": "MAT 107 - 03",
+          "name": "MAT 107 - 03 Matematik I\nADNAN TERCAN (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "1",
+          "time": "13:40-14:30",
+          "code": "ING 111 - 63",
+          "name": "ING 111 - 63 DİL BECERİLERİ I\n(Y3-08)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "3",
+          "time": "08:40-9:30",
+          "code": "JEO 253 - 01",
+          "name": "JEO 253 - 01 (P)* Mineraloji - Petrografi\nORKUN ERSOY (Y1-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "3",
+          "time": "10:40-11:30",
+          "code": "JEO 253 - 02",
+          "name": "JEO 253 - 02 (P)* Mineraloji - Petrografi\nORKUN ERSOY (Y1-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "3",
+          "time": "12:40-13:30",
+          "code": "JEO 253 - 01",
+          "name": "JEO 253 - 01 (T)* Mineraloji - Petrografi\nORKUN ERSOY (Y1-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "3",
+          "time": "14:40-15:30",
+          "code": "JEO 253 - 02",
+          "name": "JEO 253 - 02 (T)* Mineraloji - Petrografi\nORKUN ERSOY (Y1-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "5",
+          "time": "13:40-14:30",
+          "code": "MAD 345 - 01",
+          "name": "MAD 345 - 01 (T)* Maden İşletme II\nBAHTİYAR ÜNVER - G. GÜLSEV UYAR AKSOY (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "5",
+          "time": "16:40-17:30",
+          "code": "MAD 351 - 01",
+          "name": "MAD 351 - 01 Yaz Stajı I\nSAİR KAHRAMAN (Yeni Sınıf)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "5 veya 7 (belirsiz)",
+          "time": "09:40-10:30",
+          "code": "MAD 415 - 01",
+          "name": "MAD 415 - 01 Boyut Küçültme Süreçlerinde Tane Karakterizasyonu\nN. ALPER TOPRAK (Y3-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "5 veya 7 (belirsiz)",
+          "time": "12:40-13:30",
+          "code": "MAD 465 - 01",
+          "name": "MAD 465 - 01 Maden Kaynak Kestirimi\nA. ERHAN TERCAN - MEHMET ALİ HİNDİSTAN (Bilg. Lab.)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "5 veya 7 (belirsiz)",
+          "time": "16:40-17:30",
+          "code": "MÜH 401 - 02",
+          "name": "MÜH 401 - 02 Çok Disiplinli Proje Ç.",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "7",
+          "time": "08:40-9:30",
+          "code": "MAD 474 - 01",
+          "name": "MAD 474 - 01 Havalandırma\nA. KEMAL CENGİZ (Bilg. Lab.)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "7",
+          "time": "13:40-14:30",
+          "code": "MAD 457 - 01",
+          "name": "MAD 457 - 01 Üretim Metalürjisi I\nABDULLAH OBUT - AYŞE ÜÇYILDIZ (Y3-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PAZARTESİ",
+          "class_year": "7",
+          "time": "16:40-17:30",
+          "code": null,
+          "name": "ABDULLAH OBUT (Y4-04 / Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "1",
+          "time": "09:40-10:30",
+          "code": "FIZ 117- 15",
+          "name": "FIZ 117- 15 Genel Fizik Laboratuvarı\nMELTEM BABAYİĞİT (Fizik Müh. Bölümü LS1)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "1",
+          "time": "13:40-14:30",
+          "code": "FİZ 127 - 15",
+          "name": "FİZ 127 - 15 Fizik I\nÖZLEM DUYAR COŞKUN (Yıldız Amfi M8)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "1",
+          "time": "17:40-18:30",
+          "code": "TKD 103 - 33",
+          "name": "TKD 103 - 33 Türk Dili I\nBURHAN UMUR ATİKOL\n(Uzaktan Eğitim)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "3",
+          "time": "08:40-9:30",
+          "code": "MAD 231 - 01",
+          "name": "MAD 231 - 01 Malzeme Mekaniği\nA. KEMAL CENGİZ (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "3",
+          "time": "11:40-12:30",
+          "code": "MAD 215 - 01",
+          "name": "MAD 215 - 01 Mühendislik Termodinamiği\nABDULLAH OBUT (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "3",
+          "time": "13:40-14:30",
+          "code": "MAT 223 - 02",
+          "name": "MAT 223 - 02 Müh. Matematiği\nKERİME KALLI (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "5",
+          "time": "08:40-9:30",
+          "code": "MAD 349 - 01",
+          "name": "MAD 349 - 01 (T)* Kaya Mekaniği\nG. G. UYAR AKSOY - E. YILMAZKAYA (Y3-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "5",
+          "time": "10:40-11:30",
+          "code": "MAD 339 - 01",
+          "name": "MAD 339 - 01 Müh. Sondaj Tek.\nSAİR KAHRAMAN (Y3-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "5",
+          "time": "13:40-14:30",
+          "code": "MAD 345 - 01",
+          "name": "MAD 345 - 01 (P)* Mad. İşletme II\nBAHTİYAR ÜNVER - G. GÜLSEV UYAR AKSOY (Y3-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "7",
+          "time": "08:40-9:30",
+          "code": "MAD 473 - 01",
+          "name": "MAD 473 - 01 (T)* Flotasyon I\nZAFİR EKMEKÇİ - ÖZLEM BIÇAK (Y3-08)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "7",
+          "time": "10:40-11:30",
+          "code": "MAD 475 - 01",
+          "name": "MAD 475 - 01 (T)* Tünelcilik\nBAHTİYAR ÜNVER (Y1-06) | MAD 473 - 01 (P)* Flotasyon I\nZAFİR EKMEKÇİ - ÖZLEM BIÇAK (Cev.Haz.Lab)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "7",
+          "time": "13:40-14:30",
+          "code": "MAD 447 - 01",
+          "name": "MAD 447 - 01 Kritik Ham Maddeler ve Geri Dönüşüm\nERGİN GÜLCAN (Y1-06) | MAD 262 - 01 Maden Hukuku ve Çevre\nM. SUPHİ ÜNAL (Y3-08)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "SALI",
+          "class_year": "7",
+          "time": "17:40-18:30",
+          "code": "MAD 431 - (01-…-26)",
+          "name": "MAD 431 - (01-…-26) Mezuniyet Projesi I\nDers sorumluları",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "1",
+          "time": "08:40-9:30",
+          "code": "KİM 119 - 01",
+          "name": "KİM 119 - 01 / 02 / 03 Kimya Laboratuvarı I\nGenel Kimya Lab. (Kimya Bölümü)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "1",
+          "time": "13:40-14:30",
+          "code": "KİM 109 - 04",
+          "name": "KİM 109 - 04 / 05 Kimya I\n(Y3-06 / Y3-08)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "1",
+          "time": "15:40-16:30",
+          "code": "MAD 111 - 01",
+          "name": "MAD 111 - 01 Maden Müh. Giriş\nEMRE YILMAZKAYA - AYŞE ÜÇYILDIZ\n(Y3-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "3",
+          "time": "10:40-11:30",
+          "code": "AİT 203 - 77",
+          "name": "AİT 203 - 77 Atatürk İlkeleri ve İnkılap Tarihi I\nGÖNÜL GÜNEŞ (Y3-08)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "3",
+          "time": "12:40-13:30",
+          "code": "MAT 223 - 02",
+          "name": "MAT 223 - 02 Müh. Matematiği\nKERİME KALLI (Y1-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "5",
+          "time": "08:40-9:30",
+          "code": "MAD 349 - 02",
+          "name": "MAD 349 - 02 (T)* Kaya Mekaniği\nHİLAL SOYDAN ULUBAY (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "5",
+          "time": "10:40-11:30",
+          "code": "MAD 349 - 02",
+          "name": "MAD 349 - 02 (P)* Kaya Mekaniği\nHİLAL SOYDAN ULUBAY (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "5",
+          "time": "12:40-13:30",
+          "code": "MAD 307 - 01",
+          "name": "MAD 307 - 01 Maden Yataklarının Değerlendirilmesi\nA. ERHAN TERCAN - FIRAT ATALAY (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "5",
+          "time": "18:40-19:30",
+          "code": "MÜH 103 - 01",
+          "name": "MÜH 103 - 01\nİş Sağ. ve Güv. I\nM. SUPHİ ÜNAL\n(Uzaktan Eğitim)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "5",
+          "time": "19:40-20.30",
+          "code": "MÜH 104 - 01",
+          "name": "MÜH 104 - 01\nİş Sağ. ve Güv. II\nM. SUPHİ ÜNAL\n(Uzaktan Eğitim)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "7",
+          "time": "09:40-10:30",
+          "code": "MAD 455 - 01",
+          "name": "MAD 455 - 01 Açık Ocak İşletmeciliği\nMEHMET ALİ HİNDİSTAN (Y3-06) | MAD 445 - 01 Cevher Hazırlamada Ön Zenginleştirme Uygulamaları\nDAMLA İZERDEM (Yeni Sınıf)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "ÇARŞAMBA",
+          "class_year": "7",
+          "time": "14:40-15:30",
+          "code": "MAD 475",
+          "name": "MAD 475 (P)* - 01 Tünelcilik\nBAHTİYAR ÜNVER (Y1-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PERŞEMBE",
+          "class_year": "1",
+          "time": "08:40-9:30",
+          "code": "KİM 109 - 04",
+          "name": "KİM 109 - 04 / 05 Kimya I\n(Y3-06 / Y3-08)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PERŞEMBE",
+          "class_year": "1 veya 3 (belirsiz)",
+          "time": "09:40-10:30",
+          "code": "ING 211 - 61",
+          "name": "ING 211 - 61 Akademik Yazma Becerileri I\n(Y1-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PERŞEMBE",
+          "class_year": "1 veya 3 (belirsiz)",
+          "time": "13:40-14:30",
+          "code": "MAD 229 - 01",
+          "name": "MAD 229 - 01 Maden Makinaları ve Elektrik Sistemleri\nEMRE YILMAZKAYA (Y3-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PERŞEMBE",
+          "class_year": "3",
+          "time": "11:40-12:30",
+          "code": "MAD 258 - 01",
+          "name": "MAD 258 - 01 (P)* Cevher Haz. I\nA. HAKAN BENZER - NAMIK A. AYDOĞAN (Cev.H.Lab)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PERŞEMBE",
+          "class_year": "3",
+          "time": "13:40-14:30",
+          "code": "MAD 258 - 01",
+          "name": "MAD 258 - 01 (T)* Cevher Hazırlama I\nA. HAKAN BENZER - NAMIK A. AYDOĞAN (Yeni Sınıf)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PERŞEMBE",
+          "class_year": "5",
+          "time": "10:40-11:30",
+          "code": "MAD 349 - 01",
+          "name": "MAD 349 - 01 (P)* Kaya Mekaniği\nG. G. UYAR AKSOY - E. YILMAZKAYA (Y3-08)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PERŞEMBE",
+          "class_year": "7",
+          "time": "08:40-9:30",
+          "code": "MAD 463 - 01",
+          "name": "MAD 463 - 01 Cevher Hazırlamada Tesis Hesaplamaları\nNAMIK A. AYDOĞAN - OKAY ALTUN (Bilg. Lab.)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PERŞEMBE",
+          "class_year": "7",
+          "time": "13:40-14:30",
+          "code": "MAD 441",
+          "name": "MAD 441 Nanoteknolojide Boyut Küçültme\nOKAY ALTUN (Bilg. Lab.)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "PERŞEMBE",
+          "class_year": "7",
+          "time": "16:40-17:30",
+          "code": "MAD 469 - 01",
+          "name": "MAD 469 - 01 Yaz Stajı II\nSAİR KAHRAMAN (Yeni Sınıf)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "CUMA",
+          "class_year": "1",
+          "time": "13:40-14:30",
+          "code": "MAT 107 - 03",
+          "name": "MAT 107 - 03 Matematik I\nADNAN TERCAN (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "CUMA",
+          "class_year": "3",
+          "time": "10:40-11:30",
+          "code": "MAD 213 - 01",
+          "name": "MAD 213 - 01 Temel İstatistik\nHİLAL SOYDAN ULUBAY (Y4-02)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "CUMA",
+          "class_year": "5",
+          "time": "09:40-10:30",
+          "code": "MAD 343 - 01",
+          "name": "MAD 343 - 01 (T)* Cevher Hazırlama II\nİLKAY B. CAN - ÖZLEM BIÇAK (Y1-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "CUMA",
+          "class_year": "5",
+          "time": "13:40-14:30",
+          "code": "MAD 343 - 01",
+          "name": "MAD 343 - 01 (P)* Cevher Hazırlama II\nİLKAY B. CAN - ÖZLEM BIÇAK (Cev.Haz.Lab.)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "CUMA",
+          "class_year": "5 veya 7 (belirsiz)",
+          "time": "09:40-10:30",
+          "code": "MAD 421 - 01",
+          "name": "MAD 421 - 01 Endüstriyel Hammadde Zenginleştirme İşlm.\nHAKAN DÜNDAR (Y3-08)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "CUMA",
+          "class_year": "5 veya 7 (belirsiz)",
+          "time": "13:40-14:30",
+          "code": "MAD 461 - 01",
+          "name": "MAD 461 - 01 Kömür Hazırlama\nÖZGÜR ÖZCAN (Y3-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "CUMA",
+          "class_year": "7",
+          "time": "09:40-10:30",
+          "code": "MAD 443 - 01",
+          "name": "MAD 443 - 01 Modern Madencilik Teknolojileri ve Yenilikleri\nS. YASİN KILLIOĞLU (Y3-06)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        },
+        {
+          "day": "CUMA",
+          "class_year": "7",
+          "time": "13:40-14:30",
+          "code": "MAD 449",
+          "name": "MAD 449 Madencilik Uygulamalarında Yöneylem Araştırmaları\nHİLAL SOYDAN ULUBAY (Y3-08)",
+          "room": null,
+          "instructor": null,
+          "capacity": null
+        }
+      ],
       "warnings": [
-        "Tanınmayan tablo başlığı, atlandı: 'GÜN\\nDAY .mS 08:40-9:30 09:40-10:30 10:40-11:30 11:40-12:30 12:40-13:30 13:40-14:'",
-        "Tanınmayan tablo başlığı, atlandı: 'ABC'"
+        "PAZARTESİ bloğunda bir satırın yarıyılı kesin belirlenemedi (yy.5 ile yy.7 arasında) - ilgili ders(ler) 'belirsiz' olarak işaretlendi.",
+        "SALI / yy.7 / 10:40-11:30: aynı hücrede birden fazla ders olabilir, elle ayrılmalı: 'MAD 475 - 01 (T)* Tünelcilik\\nBAHTİYAR ÜNVER (Y1-06) | MAD 473 - 01 (P)* Flotasyon I\\nZAFİR EKMEKÇİ - ÖZLEM BIÇAK (Cev.Haz'",
+        "SALI / yy.7 / 13:40-14:30: aynı hücrede birden fazla ders olabilir, elle ayrılmalı: 'MAD 447 - 01 Kritik Ham Maddeler ve Geri Dönüşüm\\nERGİN GÜLCAN (Y1-06) | MAD 262 - 01 Maden Hukuku ve Çevre\\nM. SUPHİ ÜNAL'",
+        "ÇARŞAMBA / yy.7 / 09:40-10:30: aynı hücrede birden fazla ders olabilir, elle ayrılmalı: 'MAD 455 - 01 Açık Ocak İşletmeciliği\\nMEHMET ALİ HİNDİSTAN (Y3-06) | MAD 445 - 01 Cevher Hazırlamada Ön Zenginleştirme Uy'",
+        "PERŞEMBE bloğunda bir satırın yarıyılı kesin belirlenemedi (yy.1 ile yy.3 arasında) - ilgili ders(ler) 'belirsiz' olarak işaretlendi.",
+        "CUMA bloğunda bir satırın yarıyılı kesin belirlenemedi (yy.5 ile yy.7 arasında) - ilgili ders(ler) 'belirsiz' olarak işaretlendi."
       ]
     },
     {
@@ -531,7 +1096,7 @@
       "name": "Matematik",
       "faculty": "Fen Fakültesi",
       "homepage": "https://mat.hacettepe.edu.tr/",
-      "last_checked": "2026-09-11T19:12:48+00:00",
+      "last_checked": "2026-09-11T19:13:58+00:00",
       "status": "not_published",
       "source_pdf_url": null,
       "source_pdf_sha256": null,
