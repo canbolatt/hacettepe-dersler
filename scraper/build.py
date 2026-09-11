@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Ana orkestratör: her bölüm için
   1) PDF linkini bul (known_pdf ya da otomatik keşif)
@@ -28,6 +27,7 @@ import requests
 from .config import DEPARTMENTS, USER_AGENT, REQUEST_TIMEOUT
 from .discover import discover_pdf
 from .parse_pdf import extract_tables, tables_to_courses, sha256_of_file
+from .parse_grid import extract_grid_courses
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, "data")
@@ -98,8 +98,11 @@ def process_department(dept: dict, tmp_dir: str) -> dict:
     record["source_pdf_sha256"] = sha256_of_file(dest)
 
     try:
-        tables = extract_tables(dest)
-        courses, warnings = tables_to_courses(tables)
+        if dept.get("parser") == "grid":
+            courses, warnings = extract_grid_courses(dest)
+        else:
+            tables = extract_tables(dest)
+            courses, warnings = tables_to_courses(tables)
     except Exception as e:  # noqa: BLE001 - hepsini yakala, veri kaybetme
         record["status"] = "parse_error"
         record["note"] += f" | Ayrıştırma hatası: {e}"
