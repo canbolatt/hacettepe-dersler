@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-15T10:42:04+00:00",
+  "generated_at": "2026-09-16T10:30:18+00:00",
   "departments": [
     {
       "id": "psikoloji",
       "name": "Psikoloji",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://psikoloji.hacettepe.edu.tr/",
-      "last_checked": "2026-09-15T10:41:58+00:00",
+      "last_checked": "2026-09-16T10:30:10+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/psikoloji/dosyalar/Ders%20programlar%C4%B1/2026-27%20L%C4%B0SANS%20PANO.pdf",
-      "source_pdf_sha256": "e8bc11731aad8844470c2a71aa2e4a73a3223f935715dcaccdfc7341add9e6ff",
+      "source_pdf_sha256": "98eff7991fd028b94fdfe3b04fc4918505a83021d98416c5bce8008213712c1a",
       "note": "config.py içinde insan tarafından doğrulanmış link (verified_on=2026-09-11).",
       "courses": [
         {
@@ -354,7 +354,7 @@
           "day": "PERŞEMBE",
           "time": "12:40-16:30",
           "room": "B10-205",
-          "capacity": "10"
+          "capacity": "15"
         },
         {
           "class_year": null,
@@ -538,7 +538,7 @@
       "name": "Maden Mühendisliği",
       "faculty": "Mühendislik Fakültesi",
       "homepage": "https://maden.hacettepe.edu.tr/",
-      "last_checked": "2026-09-15T10:42:00+00:00",
+      "last_checked": "2026-09-16T10:30:12+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/maden/dosyalar/dersprogrami/2627G-Program.pdf",
       "source_pdf_sha256": "e835c231102172d545cf2f968393a202674773097e30dd25bd4ff6d86f81fc46",
@@ -1208,7 +1208,7 @@
       "name": "Matematik",
       "faculty": "Fen Fakültesi",
       "homepage": "https://mat.hacettepe.edu.tr/",
-      "last_checked": "2026-09-15T10:42:01+00:00",
+      "last_checked": "2026-09-16T10:30:14+00:00",
       "status": "not_published",
       "source_pdf_url": null,
       "source_pdf_sha256": null,
@@ -1227,7 +1227,7 @@
       "name": "Tarih",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://history.hacettepe.edu.tr/",
-      "last_checked": "2026-09-15T10:42:03+00:00",
+      "last_checked": "2026-09-16T10:30:17+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/tarih/dosyalar/duyurular/2026-2027%20G%C3%BCz%20D%C3%B6nemi%20Lisans%20Ders%20Program%C4%B1.pdf",
       "source_pdf_sha256": "6327b8774741633aef1021e55d7b05b5f2afadca468cec583168895545419a87",
