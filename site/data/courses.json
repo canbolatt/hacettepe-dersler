@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-19T09:58:06+00:00",
+  "generated_at": "2026-09-20T10:18:11+00:00",
   "departments": [
     {
       "id": "psikoloji",
       "name": "Psikoloji",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://psikoloji.hacettepe.edu.tr/",
-      "last_checked": "2026-09-19T09:57:59+00:00",
+      "last_checked": "2026-09-20T10:18:05+00:00",
       "status": "fetch_error",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/psikoloji/dosyalar/Ders%20programlar%C4%B1/2026-27%20L%C4%B0SANS%20PANO.pdf",
       "source_pdf_sha256": null,
@@ -19,7 +19,7 @@
       "name": "Maden Mühendisliği",
       "faculty": "Mühendislik Fakültesi",
       "homepage": "https://maden.hacettepe.edu.tr/",
-      "last_checked": "2026-09-19T09:58:00+00:00",
+      "last_checked": "2026-09-20T10:18:06+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/maden/dosyalar/dersprogrami/2627G-Program.pdf",
       "source_pdf_sha256": "e835c231102172d545cf2f968393a202674773097e30dd25bd4ff6d86f81fc46",
@@ -689,7 +689,7 @@
       "name": "Matematik",
       "faculty": "Fen Fakültesi",
       "homepage": "https://mat.hacettepe.edu.tr/",
-      "last_checked": "2026-09-19T09:58:02+00:00",
+      "last_checked": "2026-09-20T10:18:08+00:00",
       "status": "not_published",
       "source_pdf_url": null,
       "source_pdf_sha256": null,
@@ -708,10 +708,10 @@
       "name": "Tarih",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://history.hacettepe.edu.tr/",
-      "last_checked": "2026-09-19T09:58:04+00:00",
+      "last_checked": "2026-09-20T10:18:09+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/tarih/dosyalar/duyurular/2026-2027%20G%C3%BCz%20D%C3%B6nemi%20Lisans%20Ders%20Program%C4%B1.pdf",
-      "source_pdf_sha256": "6327b8774741633aef1021e55d7b05b5f2afadca468cec583168895545419a87",
+      "source_pdf_sha256": "a0892c21eab00205ede0ac6cd704c1820b218865ed26ff5bc4dd00318904f14b",
       "note": "config.py içinde insan tarafından doğrulanmış link (verified_on=2026-09-11).",
       "courses": [
         {
@@ -725,7 +725,7 @@
         },
         {
           "class_year": "1",
-          "code": "TAR 127-01",
+          "code": "TAR127-01",
           "name": "Osmanlıca I",
           "instructor": "Dr. Ömer Gezer",
           "day": "Cuma",
@@ -743,7 +743,7 @@
         },
         {
           "class_year": "1",
-          "code": "TAR l35-0l",
+          "code": "TARl35-01",
           "name": "Bilgisayar ve Tarih I",
           "instructor": "Dr. Fatih Yeşil",
           "day": "Cuma",
@@ -752,7 +752,7 @@
         },
         {
           "class_year": "1",
-          "code": "TAR I27-02",
+          "code": "TAR127-02",
           "name": "Osmanlıca I",
           "instructor": "Dr. Nagihan Doğan",
           "day": "Perşembe",
@@ -761,7 +761,7 @@
         },
         {
           "class_year": "1",
-          "code": "TAR 131-01",
+          "code": "TAR131-01",
           "name": "Tarih Metodolojisi",
           "instructor": "Dr. Fatih Yeşil",
           "day": "Pazartesi",
@@ -770,7 +770,7 @@
         },
         {
           "class_year": "1",
-          "code": "TAR 111-01",
+          "code": "TAR111-01",
           "name": "İlkçağ Tarihi",
           "instructor": "Dr. Koray Toptaş",
           "day": "Perşembe",
@@ -788,7 +788,7 @@
         },
         {
           "class_year": "2",
-          "code": "TAR 215",
+          "code": "TAR215",
           "name": "Türk Kültür Tarihi I",
           "instructor": "Dr. Erkin Ekrem",
           "day": "Pazartesi",
@@ -806,7 +806,7 @@
         },
         {
           "class_year": "2",
-          "code": "TAR 235",
+          "code": "TAR235",
           "name": "Klasik İslam Dünyası",
           "instructor": "Dr. Nagihan Doğan",
           "day": "Çarşamba",
@@ -815,7 +815,7 @@
         },
         {
           "class_year": "2",
-          "code": "TAR 243-01",
+          "code": "TAR243-01",
           "name": "Osmanlıca III",
           "instructor": "Dr. M. Hulusi Lekesiz",
           "day": "Çarşamba",
@@ -824,7 +824,7 @@
         },
         {
           "class_year": "2",
-          "code": "TAR 237-1/2",
+          "code": "TAR237-1/2",
           "name": "Ortaçağ Avrupa Tarihi",
           "instructor": "Dr. Caner Togaç",
           "day": "Pazartesi",
@@ -833,7 +833,7 @@
         },
         {
           "class_year": "2",
-          "code": "TAR 2l7",
+          "code": "TAR217",
           "name": "Müslüman Türk Dünyası",
           "instructor": "Dr. Resul Ay",
           "day": "Perşembe",
@@ -851,7 +851,7 @@
         },
         {
           "class_year": "2",
-          "code": "TAR 243-03",
+          "code": "TAR243-03",
           "name": "Osmanlıca III",
           "instructor": "Dr. Ömer Gezer",
           "day": "Cuma",
@@ -860,7 +860,7 @@
         },
         {
           "class_year": "2",
-          "code": "TAR 245",
+          "code": "TAR245",
           "name": "Tarihi Coğrafya",
           "instructor": "Dr. Özlem Sert",
           "day": "Salı",
@@ -869,16 +869,16 @@
         },
         {
           "class_year": "3",
-          "code": "TAR-327",
+          "code": "TAR327",
           "name": "Rusya Kafkasya Tarihi",
           "instructor": "Dr. Özhan Kapıcı",
           "day": "Cuma",
-          "time": "8.40-11.30",
+          "time": "08.40-11.30",
           "room": "B4-2K-202"
         },
         {
           "class_year": "3",
-          "code": "TAR-341",
+          "code": "TAR341",
           "name": "Osmanlı Paleografyası",
           "instructor": "Dr. M. Hulusi Lekesiz",
           "day": "Çarşamba",
@@ -887,7 +887,7 @@
         },
         {
           "class_year": "3",
-          "code": "TAR-377",
+          "code": "TAR377",
           "name": "Büyük Selçuklu Tarihi",
           "instructor": "Dr. Resul Ay",
           "day": "Çarşamba",
@@ -896,7 +896,7 @@
         },
         {
           "class_year": "3",
-          "code": "TAR-333",
+          "code": "TAR333",
           "name": "Türk Edebiyatı Tarihi I",
           "instructor": "Dr. Aysun Çelik",
           "day": "Perşembe",
@@ -905,7 +905,7 @@
         },
         {
           "class_year": "3",
-          "code": "TAR 345-01",
+          "code": "TAR345-01",
           "name": "Türk Tarih Semineri",
           "instructor": "Dr. M. Hulusi Lekesiz",
           "day": "Pazartesi",
@@ -914,7 +914,7 @@
         },
         {
           "class_year": "3",
-          "code": "TAR 345-02",
+          "code": "TAR345-02",
           "name": "Türk Tarih Semineri",
           "instructor": "Dr. Gökay Yavrucuk",
           "day": "Pazartesi",
@@ -923,7 +923,7 @@
         },
         {
           "class_year": "3",
-          "code": "TAR 345-03",
+          "code": "TAR345-03",
           "name": "Türk Tarih Semineri",
           "instructor": "Dr. Resul Ay",
           "day": "Perşembe",
@@ -932,7 +932,7 @@
         },
         {
           "class_year": "3",
-          "code": "TAR-315",
+          "code": "TAR315",
           "name": "Osmanlı Tarihi I",
           "instructor": "Dr. Rüya Kılıç",
           "day": "Perşembe",
@@ -941,7 +941,7 @@
         },
         {
           "class_year": "3",
-          "code": "TAR-339",
+          "code": "TAR339",
           "name": "Sömürgecilik Tarihi",
           "instructor": "Dr. Selda Güner Özden",
           "day": "Salı",
@@ -959,7 +959,7 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 409",
+          "code": "TAR409",
           "name": "Tarih Yazıcılığı I",
           "instructor": "Dr. Gökay Yavrucuk",
           "day": "Cuma",
@@ -968,7 +968,7 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 491",
+          "code": "TAR491",
           "name": "Osmanlı Arşiv Metinleri I",
           "instructor": "Dr. Emine Erdoğan Özünlü",
           "day": "Salı",
@@ -977,7 +977,7 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 407",
+          "code": "TAR407",
           "name": "Orta Asya Türk Dünyası",
           "instructor": "Dr. Erkin Ekrem",
           "day": "Salı",
@@ -986,7 +986,7 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 421",
+          "code": "TAR421",
           "name": "Yenileşme Tarihi",
           "instructor": "Dr. Selda Güner Özden",
           "day": "Çarşamba",
@@ -995,7 +995,7 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 403",
+          "code": "TAR403",
           "name": "Osmanlı Sosyo-Ekonomik Tarihi",
           "instructor": "Dr. Mehmet Öz",
           "day": "Pazartesi",
@@ -1004,16 +1004,16 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 427-03",
+          "code": "TAR427-03",
           "name": "Yenileşme Tarihi Semineri",
           "instructor": "Dr. Gökay Yavrucuk",
           "day": "Çarşamba",
-          "time": "08.40-10.30",
+          "time": "08.40-11.30",
           "room": "B4-2K-205"
         },
         {
           "class_year": "4",
-          "code": "TAR 423",
+          "code": "TAR423",
           "name": "Çağdaş Dünya Tarihi I",
           "instructor": "Dr. Emre Saral",
           "day": "Perşembe",
@@ -1022,7 +1022,7 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 441",
+          "code": "TAR441",
           "name": "Çağdaş Türkiye Tarihi I",
           "instructor": "Dr. Hakan Kaynar",
           "day": "Perşembe",
@@ -1031,7 +1031,7 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 427-01",
+          "code": "TAR427-01",
           "name": "Yenileşme Tarihi Semineri",
           "instructor": "Dr. Hakan Kaynar",
           "day": "Çarşamba",
@@ -1040,7 +1040,7 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 489",
+          "code": "TAR489",
           "name": "Cumhuriyetin Sosyal Tarihi",
           "instructor": "Dr. Hakan Kaynar",
           "day": "Salı",
@@ -1049,7 +1049,7 @@
         },
         {
           "class_year": "4",
-          "code": "TAR 427-02",
+          "code": "TAR427-02",
           "name": "Yenileşme Tarihi Semineri",
           "instructor": "Dr. Fatih Yeşil",
           "day": "Salı",
@@ -1058,7 +1058,7 @@
         },
         {
           "class_year": "BD",
-          "code": "TAR 251",
+          "code": "TAR251",
           "name": "Türkiye Tarihi I",
           "instructor": "Dr. Gökay Yavrucuk",
           "day": "Cuma",
@@ -1067,7 +1067,7 @@
         },
         {
           "class_year": "BD",
-          "code": "TAR 26l",
+          "code": "TAR26l",
           "name": "Uygarlık Tarihi I",
           "instructor": "Dr. Caner Togaç",
           "day": "Çarşamba",
@@ -1076,7 +1076,7 @@
         },
         {
           "class_year": "BD",
-          "code": "TAR 241",
+          "code": "TAR241",
           "name": "Sosyal Tarih",
           "instructor": "Dr. Hakan Kaynar",
           "day": "Pazartesi",
@@ -1085,7 +1085,7 @@
         }
       ],
       "warnings": [
-        "Başlıksız devam tablosu bulundu, önceki tablonun sütun düzeni ile devam ediliyor (ilk satır: '3 TAR 345-01 Türk Tarih Semineri Dr. M. Hulusi Lekesiz Pazartesi 13.40-15.30 B4-')."
+        "Başlıksız devam tablosu bulundu, önceki tablonun sütun düzeni ile devam ediliyor (ilk satır: '3 TAR345-01 Türk Tarih Semineri Dr. M. Hulusi Lekesiz Pazartesi 13.40-15.30 B4-2')."
       ]
     }
   ]
