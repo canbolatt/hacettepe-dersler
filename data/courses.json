@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-21T11:28:00+00:00",
+  "generated_at": "2026-09-22T10:35:46+00:00",
   "departments": [
     {
       "id": "psikoloji",
       "name": "Psikoloji",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://psikoloji.hacettepe.edu.tr/",
-      "last_checked": "2026-09-21T11:27:52+00:00",
+      "last_checked": "2026-09-22T10:35:36+00:00",
       "status": "fetch_error",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/psikoloji/dosyalar/Ders%20programlar%C4%B1/2026-27%20L%C4%B0SANS%20PANO.pdf",
       "source_pdf_sha256": null,
@@ -19,10 +19,10 @@
       "name": "Maden Mühendisliği",
       "faculty": "Mühendislik Fakültesi",
       "homepage": "https://maden.hacettepe.edu.tr/",
-      "last_checked": "2026-09-21T11:27:55+00:00",
+      "last_checked": "2026-09-22T10:35:42+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/maden/dosyalar/dersprogrami/2627G-Program.pdf",
-      "source_pdf_sha256": "e835c231102172d545cf2f968393a202674773097e30dd25bd4ff6d86f81fc46",
+      "source_pdf_sha256": "f19750c458e7acfe1fd9dc9fc6109949dfc28489fc23f57c5ca193b185671ca1",
       "note": "config.py içinde insan tarafından doğrulanmış link (verified_on=2026-09-11).",
       "courses": [
         {
@@ -101,17 +101,6 @@
           "room": "Y4-02",
           "capacity": null,
           "raw_text": "MAD 345 - 01 (T)* Maden İşletme II\nBAHTİYAR ÜNVER - G. GÜLSEV UYAR AKSOY (Y4-02)"
-        },
-        {
-          "day": "PAZARTESİ",
-          "class_year": "5",
-          "time": "16:40-17:30",
-          "code": "MAD 351 - 01",
-          "name": "Yaz Stajı I",
-          "instructor": "SAİR KAHRAMAN",
-          "room": "Yeni Sınıf",
-          "capacity": null,
-          "raw_text": "MAD 351 - 01 Yaz Stajı I\nSAİR KAHRAMAN (Yeni Sınıf)"
         },
         {
           "day": "PAZARTESİ",
@@ -307,9 +296,9 @@
           "code": "MAD 473 - 01",
           "name": "(P)* Flotasyon I",
           "instructor": "ZAFİR EKMEKÇİ - ÖZLEM BIÇAK",
-          "room": "Cev.Haz.Lab",
+          "room": "Cev.Haz.Lab. / Y3-08",
           "capacity": null,
-          "raw_text": "MAD 473 - 01 (P)* Flotasyon I\nZAFİR EKMEKÇİ - ÖZLEM BIÇAK (Cev.Haz.Lab)"
+          "raw_text": "MAD 473 - 01 (P)* Flotasyon I\nZAFİR EKMEKÇİ - ÖZLEM BIÇAK (Cev.Haz.Lab. / Y3-08)"
         },
         {
           "day": "SALI",
@@ -332,17 +321,6 @@
           "room": "Y3-08",
           "capacity": null,
           "raw_text": "MAD 262 - 01 Maden Hukuku ve Çevre\nM. SUPHİ ÜNAL (Y3-08)"
-        },
-        {
-          "day": "SALI",
-          "class_year": "7",
-          "time": "17:40-18:30",
-          "code": "MAD 431 - (01-…-26)",
-          "name": "Mezuniyet Projesi I Ders sorumluları",
-          "instructor": null,
-          "room": null,
-          "capacity": null,
-          "raw_text": "MAD 431 - (01-…-26) Mezuniyet Projesi I\nDers sorumluları"
         },
         {
           "day": "ÇARŞAMBA",
@@ -576,17 +554,6 @@
           "raw_text": "MAD 441 Nanoteknolojide Boyut Küçültme\nOKAY ALTUN (Bilg. Lab.)"
         },
         {
-          "day": "PERŞEMBE",
-          "class_year": "7",
-          "time": "16:40-17:30",
-          "code": "MAD 469 - 01",
-          "name": "Yaz Stajı II",
-          "instructor": "SAİR KAHRAMAN",
-          "room": "Yeni Sınıf",
-          "capacity": null,
-          "raw_text": "MAD 469 - 01 Yaz Stajı II\nSAİR KAHRAMAN (Yeni Sınıf)"
-        },
-        {
           "day": "CUMA",
           "class_year": "1",
           "time": "13:40-14:30",
@@ -677,7 +644,7 @@
       ],
       "warnings": [
         "PAZARTESİ bloğunda bir satırın yarıyılı kesin belirlenemedi (yy.5 ile yy.7 arasında) - ilgili ders(ler) 'belirsiz' olarak işaretlendi.",
-        "SALI / yy.7 / 10:40-11:30: aynı hücrede 2 farklı ders bulundu, ayrı ayrı kaydedildi (muhtemelen bu saatte birden fazla şube/seçmeli ders aynı anda sunuluyor): 'MAD 475 - 01 (T)* Tünelcilik\\nBAHTİYAR ÜNVER (Y1-06) | MAD 473 - 01 (P)* Flotasyon I\\nZAFİR EKMEKÇİ - ÖZLEM BIÇAK (Cev.Haz.Lab)'",
+        "SALI / yy.7 / 10:40-11:30: aynı hücrede 2 farklı ders bulundu, ayrı ayrı kaydedildi (muhtemelen bu saatte birden fazla şube/seçmeli ders aynı anda sunuluyor): 'MAD 475 - 01 (T)* Tünelcilik\\nBAHTİYAR ÜNVER (Y1-06) | MAD 473 - 01 (P)* Flotasyon I\\nZAFİR EKMEKÇİ - ÖZLEM BIÇAK (Cev.Haz.Lab. / Y3-08)'",
         "SALI / yy.7 / 13:40-14:30: aynı hücrede 2 farklı ders bulundu, ayrı ayrı kaydedildi (muhtemelen bu saatte birden fazla şube/seçmeli ders aynı anda sunuluyor): 'MAD 447 - 01 Kritik Ham Maddeler ve Geri Dönüşüm\\nERGİN GÜLCAN (Y1-06) | MAD 262 - 01 Maden Hukuku ve Çevre\\nM. SUPHİ ÜNAL (Y3-08)'",
         "ÇARŞAMBA / yy.7 / 09:40-10:30: aynı hücrede 2 farklı ders bulundu, ayrı ayrı kaydedildi (muhtemelen bu saatte birden fazla şube/seçmeli ders aynı anda sunuluyor): 'MAD 455 - 01 Açık Ocak İşletmeciliği\\nMEHMET ALİ HİNDİSTAN (Y3-06) | MAD 445 - 01 Cevher Hazırlamada Ön Zenginleştirme Uygulamaları\\nDAMLA İZERDEM (Yeni Sınıf)'",
         "PERŞEMBE bloğunda bir satırın yarıyılı kesin belirlenemedi (yy.1 ile yy.3 arasında) - ilgili ders(ler) 'belirsiz' olarak işaretlendi.",
@@ -689,7 +656,7 @@
       "name": "Matematik",
       "faculty": "Fen Fakültesi",
       "homepage": "https://mat.hacettepe.edu.tr/",
-      "last_checked": "2026-09-21T11:27:57+00:00",
+      "last_checked": "2026-09-22T10:35:43+00:00",
       "status": "not_published",
       "source_pdf_url": null,
       "source_pdf_sha256": null,
@@ -708,7 +675,7 @@
       "name": "Tarih",
       "faculty": "Edebiyat Fakültesi",
       "homepage": "https://history.hacettepe.edu.tr/",
-      "last_checked": "2026-09-21T11:27:58+00:00",
+      "last_checked": "2026-09-22T10:35:44+00:00",
       "status": "ok",
       "source_pdf_url": "https://fs.hacettepe.edu.tr/tarih/dosyalar/duyurular/2026-2027%20G%C3%BCz%20D%C3%B6nemi%20Lisans%20Ders%20Program%C4%B1.pdf",
       "source_pdf_sha256": "a0892c21eab00205ede0ac6cd704c1820b218865ed26ff5bc4dd00318904f14b",
